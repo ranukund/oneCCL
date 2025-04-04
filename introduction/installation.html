@@ -9,7 +9,7 @@
     <meta charset="ascii" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Installation Guide &#8212; oneCCL  documentation</title>
+    <title>Install oneCCL from Source &#8212; oneCCL  documentation</title>
   
   
   
@@ -45,8 +45,8 @@
     <link rel="shortcut icon" href="../_static/favicons.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Sample Application" href="sample.html" />
-    <link rel="prev" title="Release Notes" href="release-notes.html" />
+    <link rel="next" title="Build a Sample Application" href="sample.html" />
+    <link rel="prev" title="Introduction" href="../introduction.html" />
     <script defer type="text/javascript" src="https://www.intel.com/content/dam/www/global/wap/performance-config.js" ></script>
     <script type="text/javascript">
         // Configure TMS settings
@@ -141,11 +141,15 @@
 </a></div>
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Get Started</span></p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">About</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../release-notes.html">Release Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Get Started</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="release-notes.html">Release Notes</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Installation Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="sample.html">Sample Application</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Install oneCCL from Source</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sample.html">Build a Sample Application</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cmake-configuration.html">Use oneCCL package from CMake</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Developer Guide</span></p>
@@ -153,7 +157,6 @@
 <li class="toctree-l1 has-children"><a class="reference internal" href="../programming-model.html">Programming Model</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../programming-model/host-communication.html">Host Communication</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../programming-model/device-communication.html">Device Communication</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../programming-model/limitations.html">Limitations</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../general-configuration.html">General Configuration</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -194,7 +197,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../api/operations/collective-operations/alltoallv.html">Alltoallv</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../api/operations/collective-operations/barrier.html">Barrier</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../api/operations/collective-operations/broadcast.html">Broadcast</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../api/operations/collective-operations/group-call.html">Group Calls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/operations/collective-operations/group-call.html">Group calls</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../api/operations/collective-operations/reduce.html">Reduce</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../api/operations/collective-operations/reduce-scatter.html">ReduceScatter</a></li>
 </ul>
@@ -397,7 +400,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Installation Guide</h1>
+    <h1>Install oneCCL from Source</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -408,7 +411,7 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#system-requirements">System Requirements</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installation-using-command-line-interface">Installation using Command Line Interface</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installation-using-cli">Installation using CLI</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#custom-installation">Custom Installation</a></li>
 </ul>
 </li>
@@ -424,16 +427,16 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section id="installation-guide">
-<h1>Installation Guide<a class="headerlink" href="#installation-guide" title="Permalink to this headline">#</a></h1>
+  <section id="install-oneccl-from-source">
+<h1>Install oneCCL from Source<a class="headerlink" href="#install-oneccl-from-source" title="Permalink to this headline">#</a></h1>
 <p>Install and configure the Intel&#174; oneAPI Collective Communications Library (oneCCL) on your system.
 oneCCL supports different installation scenarios using command line interface (CLI).</p>
 <section id="system-requirements">
 <h2>System Requirements<a class="headerlink" href="#system-requirements" title="Permalink to this headline">#</a></h2>
 <p>Ensure your system meets the hardware and software requirements before starting with installing oneCCL. See <a class="reference external" href="https://www.intel.com/content/www/us/en/developer/articles/system-requirements/oneapi-collective-communication-library-system-requirements.html">Intel&#174; oneAPI Collective Communications Library System Requirements</a> to learn about hardware and software requirements for oneCCL.</p>
 </section>
-<section id="installation-using-command-line-interface">
-<h2>Installation using Command Line Interface<a class="headerlink" href="#installation-using-command-line-interface" title="Permalink to this headline">#</a></h2>
+<section id="installation-using-cli">
+<h2>Installation using CLI<a class="headerlink" href="#installation-using-cli" title="Permalink to this headline">#</a></h2>
 <p>To install oneCCL using command line interface (CLI), follow these steps:</p>
 <ol class="arabic">
 <li><p>Clone the OneCCL git repository:</p>
@@ -526,12 +529,12 @@ oneCCL supports different installation scenarios using command line interface (C
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="release-notes.html"
+       href="../introduction.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Release Notes</p>
+        <p class="prev-next-title">Introduction</p>
       </div>
     </a>
     <a class="right-next"
@@ -539,7 +542,7 @@ oneCCL supports different installation scenarios using command line interface (C
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Sample Application</p>
+        <p class="prev-next-title">Build a Sample Application</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -562,7 +565,7 @@ oneCCL supports different installation scenarios using command line interface (C
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#system-requirements">System Requirements</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installation-using-command-line-interface">Installation using Command Line Interface</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installation-using-cli">Installation using CLI</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#custom-installation">Custom Installation</a></li>
 </ul>
 </li>
@@ -590,7 +593,7 @@ By Intel
     
   <p class="copyright">
     
-      &#169; Copyright 2023.
+      &#169; Copyright 2025.
       <br/>
     
   </p>

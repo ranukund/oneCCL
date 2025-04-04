@@ -141,11 +141,15 @@
 </a></div>
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Get Started</span></p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">About</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../../../introduction/release-notes.html">Release Notes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../introduction/installation.html">Installation Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../introduction/sample.html">Sample Application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../release-notes.html">Release Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../introduction.html">Introduction</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Get Started</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../introduction/installation.html">Install oneCCL from Source</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../introduction/sample.html">Build a Sample Application</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../introduction/cmake-configuration.html">Use oneCCL package from CMake</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Developer Guide</span></p>
@@ -153,7 +157,6 @@
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../../programming-model.html">Programming Model</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../programming-model/host-communication.html">Host Communication</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../programming-model/device-communication.html">Device Communication</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../programming-model/limitations.html">Limitations</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../../general-configuration.html">General Configuration</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -194,7 +197,7 @@
 <li class="toctree-l4 current active"><a class="current reference internal" href="#">Alltoallv</a></li>
 <li class="toctree-l4"><a class="reference internal" href="barrier.html">Barrier</a></li>
 <li class="toctree-l4"><a class="reference internal" href="broadcast.html">Broadcast</a></li>
-<li class="toctree-l4"><a class="reference internal" href="group-call.html">Group Calls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group-call.html">Group calls</a></li>
 <li class="toctree-l4"><a class="reference internal" href="reduce.html">Reduce</a></li>
 <li class="toctree-l4"><a class="reference internal" href="reduce-scatter.html">ReduceScatter</a></li>
 </ul>
@@ -426,7 +429,7 @@ document.write(`
 <li><p><strong>recv_counts</strong> &#8211; array with the number of elements of type <code class="docutils literal notranslate"><span class="pre">dtype</span></code> in receive blocks from each rank </p></li>
 <li><p><strong>dtype</strong> &#8211; the datatype of elements in <code class="docutils literal notranslate"><span class="pre">send_buf</span></code> and <code class="docutils literal notranslate"><span class="pre">recv_buf</span></code></p></li>
 <li><p><strong>comm</strong> &#8211; the communicator for which the operation will be performed </p></li>
-<li><p><strong>stream</strong> &#8211; abstraction over a device queue constructed via ccl::create_stream </p></li>
+<li><p><strong>stream</strong> &#8211; abstraction over a device queue constructed via ccl::create_stream</p></li>
 <li><p><strong>attr</strong> &#8211; optional attributes to customize operation </p></li>
 <li><p><strong>deps</strong> &#8211; an optional vector of the events that the operation should depend on </p></li>
 </ul>
@@ -501,14 +504,14 @@ document.write(`
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp">
-<span class="sig-name descname"><span class="pre">template&lt;class</span> <span class="pre">BufferObjectType,</span> <span class="pre">class</span> <span class="pre">=</span> <span class="pre">typename</span> <span class="pre">std::enable_if&lt;is_class_supported&lt;BufferObjectType&gt;(),</span> <span class="pre">event&gt;::type&gt;</span> <span class="pre">event</span> <span class="pre">CCL_API</span> <span class="pre">alltoallv</span> <span class="pre">(const</span> <span class="pre">vector_class&lt;</span> <span class="pre">reference_wrapper_class&lt;</span> <span class="pre">BufferObjectType</span> <span class="pre">&gt;&gt;</span> <span class="pre">&amp;send_bufs,</span> <span class="pre">const</span> <span class="pre">vector_class&lt;</span> <span class="pre">size_t</span> <span class="pre">&gt;</span> <span class="pre">&amp;send_counts,</span> <span class="pre">const</span> <span class="pre">vector_class&lt;</span> <span class="pre">reference_wrapper_class&lt;</span> <span class="pre">BufferObjectType</span> <span class="pre">&gt;&gt;</span> <span class="pre">&amp;recv_bufs,</span> <span class="pre">const</span> <span class="pre">vector_class&lt;</span> <span class="pre">size_t</span> <span class="pre">&gt;</span> <span class="pre">&amp;recv_counts,</span> <span class="pre">const</span> <span class="pre">communicator</span> <span class="pre">&amp;comm,</span> <span class="pre">const</span> <span class="pre">stream</span> <span class="pre">&amp;stream,</span> <span class="pre">const</span> <span class="pre">alltoallv_attr</span> <span class="pre">&amp;attr=default_alltoallv_attr,</span> <span class="pre">const</span> <span class="pre">vector_class&lt;</span> <span class="pre">event</span> <span class="pre">&gt;</span> <span class="pre">&amp;deps={})</span></span></dt>
+<span class="sig-name descname"><span class="pre">template&lt;class</span> <span class="pre">BufferObjectType,</span> <span class="pre">class</span> <span class="pre">=</span> <span class="pre">typename</span> <span class="pre">std::enable_if&lt;is_class_supported&lt;BufferObjectType&gt;(),</span> <span class="pre">event&gt;::type&gt;</span> <span class="pre">event</span> <span class="pre">CCL_API</span> <span class="pre">alltoallv</span> <span class="pre">(const</span> <span class="pre">vector_class&lt;</span> <span class="pre">reference_wrapper_class&lt;</span> <span class="pre">BufferObjectType</span> <span class="pre">&gt;</span> <span class="pre">&gt;</span> <span class="pre">&amp;send_bufs,</span> <span class="pre">const</span> <span class="pre">vector_class&lt;</span> <span class="pre">size_t</span> <span class="pre">&gt;</span> <span class="pre">&amp;send_counts,</span> <span class="pre">const</span> <span class="pre">vector_class&lt;</span> <span class="pre">reference_wrapper_class&lt;</span> <span class="pre">BufferObjectType</span> <span class="pre">&gt;</span> <span class="pre">&gt;</span> <span class="pre">&amp;recv_bufs,</span> <span class="pre">const</span> <span class="pre">vector_class&lt;</span> <span class="pre">size_t</span> <span class="pre">&gt;</span> <span class="pre">&amp;recv_counts,</span> <span class="pre">const</span> <span class="pre">communicator</span> <span class="pre">&amp;comm,</span> <span class="pre">const</span> <span class="pre">stream</span> <span class="pre">&amp;stream,</span> <span class="pre">const</span> <span class="pre">alltoallv_attr</span> <span class="pre">&amp;attr=default_alltoallv_attr,</span> <span class="pre">const</span> <span class="pre">vector_class&lt;</span> <span class="pre">event</span> <span class="pre">&gt;</span> <span class="pre">&amp;deps={})</span></span></dt>
 <dd><p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.</p>
 <p>Type-safe version. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp">
-<span class="sig-name descname"><span class="pre">template&lt;class</span> <span class="pre">BufferObjectType,</span> <span class="pre">class</span> <span class="pre">=</span> <span class="pre">typename</span> <span class="pre">std::enable_if&lt;is_class_supported&lt;BufferObjectType&gt;(),</span> <span class="pre">event&gt;::type&gt;</span> <span class="pre">event</span> <span class="pre">CCL_API</span> <span class="pre">alltoallv</span> <span class="pre">(const</span> <span class="pre">vector_class&lt;</span> <span class="pre">reference_wrapper_class&lt;</span> <span class="pre">BufferObjectType</span> <span class="pre">&gt;&gt;</span> <span class="pre">&amp;send_bufs,</span> <span class="pre">const</span> <span class="pre">vector_class&lt;</span> <span class="pre">size_t</span> <span class="pre">&gt;</span> <span class="pre">&amp;send_counts,</span> <span class="pre">const</span> <span class="pre">vector_class&lt;</span> <span class="pre">reference_wrapper_class&lt;</span> <span class="pre">BufferObjectType</span> <span class="pre">&gt;&gt;</span> <span class="pre">&amp;recv_bufs,</span> <span class="pre">const</span> <span class="pre">vector_class&lt;</span> <span class="pre">size_t</span> <span class="pre">&gt;</span> <span class="pre">&amp;recv_counts,</span> <span class="pre">const</span> <span class="pre">communicator</span> <span class="pre">&amp;comm,</span> <span class="pre">const</span> <span class="pre">alltoallv_attr</span> <span class="pre">&amp;attr=default_alltoallv_attr,</span> <span class="pre">const</span> <span class="pre">vector_class&lt;</span> <span class="pre">event</span> <span class="pre">&gt;</span> <span class="pre">&amp;deps={})</span></span></dt>
+<span class="sig-name descname"><span class="pre">template&lt;class</span> <span class="pre">BufferObjectType,</span> <span class="pre">class</span> <span class="pre">=</span> <span class="pre">typename</span> <span class="pre">std::enable_if&lt;is_class_supported&lt;BufferObjectType&gt;(),</span> <span class="pre">event&gt;::type&gt;</span> <span class="pre">event</span> <span class="pre">CCL_API</span> <span class="pre">alltoallv</span> <span class="pre">(const</span> <span class="pre">vector_class&lt;</span> <span class="pre">reference_wrapper_class&lt;</span> <span class="pre">BufferObjectType</span> <span class="pre">&gt;</span> <span class="pre">&gt;</span> <span class="pre">&amp;send_bufs,</span> <span class="pre">const</span> <span class="pre">vector_class&lt;</span> <span class="pre">size_t</span> <span class="pre">&gt;</span> <span class="pre">&amp;send_counts,</span> <span class="pre">const</span> <span class="pre">vector_class&lt;</span> <span class="pre">reference_wrapper_class&lt;</span> <span class="pre">BufferObjectType</span> <span class="pre">&gt;</span> <span class="pre">&gt;</span> <span class="pre">&amp;recv_bufs,</span> <span class="pre">const</span> <span class="pre">vector_class&lt;</span> <span class="pre">size_t</span> <span class="pre">&gt;</span> <span class="pre">&amp;recv_counts,</span> <span class="pre">const</span> <span class="pre">communicator</span> <span class="pre">&amp;comm,</span> <span class="pre">const</span> <span class="pre">alltoallv_attr</span> <span class="pre">&amp;attr=default_alltoallv_attr,</span> <span class="pre">const</span> <span class="pre">vector_class&lt;</span> <span class="pre">event</span> <span class="pre">&gt;</span> <span class="pre">&amp;deps={})</span></span></dt>
 <dd><p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.</p>
 <p>Type-safe version. </p>
 </dd></dl>
@@ -573,7 +576,7 @@ By Intel
     
   <p class="copyright">
     
-      &#169; Copyright 2023.
+      &#169; Copyright 2025.
       <br/>
     
   </p>

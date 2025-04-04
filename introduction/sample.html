@@ -9,7 +9,7 @@
     <meta charset="ascii" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Sample Application &#8212; oneCCL  documentation</title>
+    <title>Build a Sample Application &#8212; oneCCL  documentation</title>
   
   
   
@@ -46,7 +46,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Use oneCCL package from CMake" href="cmake-configuration.html" />
-    <link rel="prev" title="Installation Guide" href="installation.html" />
+    <link rel="prev" title="Install oneCCL from Source" href="installation.html" />
     <script defer type="text/javascript" src="https://www.intel.com/content/dam/www/global/wap/performance-config.js" ></script>
     <script type="text/javascript">
         // Configure TMS settings
@@ -141,11 +141,15 @@
 </a></div>
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Get Started</span></p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">About</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../release-notes.html">Release Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Get Started</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="release-notes.html">Release Notes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation Guide</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Sample Application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Install oneCCL from Source</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Build a Sample Application</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cmake-configuration.html">Use oneCCL package from CMake</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Developer Guide</span></p>
@@ -153,7 +157,6 @@
 <li class="toctree-l1 has-children"><a class="reference internal" href="../programming-model.html">Programming Model</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../programming-model/host-communication.html">Host Communication</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../programming-model/device-communication.html">Device Communication</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../programming-model/limitations.html">Limitations</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../general-configuration.html">General Configuration</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -194,7 +197,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../api/operations/collective-operations/alltoallv.html">Alltoallv</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../api/operations/collective-operations/barrier.html">Barrier</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../api/operations/collective-operations/broadcast.html">Broadcast</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../api/operations/collective-operations/group-call.html">Group Calls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/operations/collective-operations/group-call.html">Group calls</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../api/operations/collective-operations/reduce.html">Reduce</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../api/operations/collective-operations/reduce-scatter.html">ReduceScatter</a></li>
 </ul>
@@ -397,7 +400,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Sample Application</h1>
+    <h1>Build a Sample Application</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -407,8 +410,8 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#build-details">Build details</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#run-the-sample">Run the sample</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#build-the-library">Build the Library</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#run-the-sample">Run the Sample</a></li>
 </ul>
             </nav>
         </div>
@@ -420,8 +423,8 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section id="sample-application">
-<h1>Sample Application<a class="headerlink" href="#sample-application" title="Permalink to this headline">#</a></h1>
+  <section id="build-a-sample-application">
+<h1>Build a Sample Application<a class="headerlink" href="#build-a-sample-application" title="Permalink to this headline">#</a></h1>
 <p>The sample code below shows how to use oneCCL API to perform allreduce communication for SYCL USM memory.</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;mpi.h&gt;</span>
@@ -568,11 +571,16 @@ document.write(`
 <span class="p">}</span>
 </pre></div>
 </div>
-<section id="build-details">
-<h2>Build details<a class="headerlink" href="#build-details" title="Permalink to this headline">#</a></h2>
+<section id="build-the-library">
+<h2>Build the Library<a class="headerlink" href="#build-the-library" title="Permalink to this headline">#</a></h2>
 <ol class="arabic">
-<li><p><a class="reference internal" href="installation.html#enable-sycl"><span class="std std-ref">Build</span></a> oneCCL with <code class="docutils literal notranslate"><span class="pre">SYCL</span></code> support (only Intel&#174; oneAPI DPC++/C++ Compiler is supported).</p></li>
-<li><p><a class="reference external" href="https://www.intel.com/content/www/us/en/docs/oneccl/get-started-guide/current/overview.html#SAMPLE-APPLICATION">Set up the library environment</a>.</p></li>
+<li><p>Build the library with <code class="docutils literal notranslate"><span class="pre">SYCL</span></code> support (only Intel&#174; oneAPI DPC++/C++ Compiler is supported).</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">cmake</span><span class="w"> </span><span class="p">..</span><span class="w"> </span><span class="o">-</span><span class="n">DCMAKE_C_COMPILER</span><span class="o">=</span><span class="n">icx</span><span class="w"> </span><span class="o">-</span><span class="n">DCMAKE_CXX_COMPILER</span><span class="o">=</span><span class="n">icpx</span><span class="w"> </span><span class="o">-</span><span class="n">DCOMPUTE_BACKEND</span><span class="o">=</span><span class="n">dpcpp</span>
+<span class="n">make</span><span class="w"> </span><span class="n">install</span>
+</pre></div>
+</div>
+</li>
+<li><p><a class="reference external" href="https://www.intel.com/content/www/us/en/docs/oneccl/get-started-guide/2021-13/overview.html#BEFORE-YOU-BEGIN">Set up the library environment</a>.</p></li>
 <li><p>Use the C++ driver with the -fsycl option to build the sample:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">icpx</span><span class="w"> </span><span class="o">-</span><span class="n">o</span><span class="w"> </span><span class="n">sample</span><span class="w"> </span><span class="n">sample</span><span class="p">.</span><span class="n">cpp</span><span class="w"> </span><span class="o">-</span><span class="n">lccl</span><span class="w"> </span><span class="o">-</span><span class="n">lmpi</span><span class="w"> </span><span class="o">-</span><span class="n">fsycl</span>
 </pre></div>
@@ -581,7 +589,7 @@ document.write(`
 </ol>
 </section>
 <section id="run-the-sample">
-<h2>Run the sample<a class="headerlink" href="#run-the-sample" title="Permalink to this headline">#</a></h2>
+<h2>Run the Sample<a class="headerlink" href="#run-the-sample" title="Permalink to this headline">#</a></h2>
 <p>Intel&#174; MPI Library is required for running the sample. Make sure that MPI environment is set up.</p>
 <p>To run the sample, use the following command:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">mpiexec</span><span class="w"> </span><span class="o">&lt;</span><span class="n">parameters</span><span class="o">&gt;</span><span class="w"> </span><span class="p">.</span><span class="o">/</span><span class="n">sample</span>
@@ -613,7 +621,7 @@ document.write(`
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Installation Guide</p>
+        <p class="prev-next-title">Install oneCCL from Source</p>
       </div>
     </a>
     <a class="right-next"
@@ -643,8 +651,8 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#build-details">Build details</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#run-the-sample">Run the sample</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#build-the-library">Build the Library</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#run-the-sample">Run the Sample</a></li>
 </ul>
   </nav></div>
 
@@ -668,7 +676,7 @@ By Intel
     
   <p class="copyright">
     
-      &#169; Copyright 2023.
+      &#169; Copyright 2025.
       <br/>
     
   </p>

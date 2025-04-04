@@ -45,7 +45,7 @@
     <link rel="shortcut icon" href="_static/favicons.png"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Release Notes" href="introduction/release-notes.html" />
+    <link rel="next" title="Release Notes" href="release-notes.html" />
     <script defer type="text/javascript" src="https://www.intel.com/content/dam/www/global/wap/performance-config.js" ></script>
     <script type="text/javascript">
         // Configure TMS settings
@@ -140,11 +140,15 @@
 </a></div>
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Get Started</span></p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">About</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="introduction/release-notes.html">Release Notes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="introduction/installation.html">Installation Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="introduction/sample.html">Sample Application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="release-notes.html">Release Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Get Started</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="introduction/installation.html">Install oneCCL from Source</a></li>
+<li class="toctree-l1"><a class="reference internal" href="introduction/sample.html">Build a Sample Application</a></li>
 <li class="toctree-l1"><a class="reference internal" href="introduction/cmake-configuration.html">Use oneCCL package from CMake</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Developer Guide</span></p>
@@ -152,7 +156,6 @@
 <li class="toctree-l1 has-children"><a class="reference internal" href="programming-model.html">Programming Model</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="programming-model/host-communication.html">Host Communication</a></li>
 <li class="toctree-l2"><a class="reference internal" href="programming-model/device-communication.html">Device Communication</a></li>
-<li class="toctree-l2"><a class="reference internal" href="programming-model/limitations.html">Limitations</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="general-configuration.html">General Configuration</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -193,7 +196,7 @@
 <li class="toctree-l4"><a class="reference internal" href="api/operations/collective-operations/alltoallv.html">Alltoallv</a></li>
 <li class="toctree-l4"><a class="reference internal" href="api/operations/collective-operations/barrier.html">Barrier</a></li>
 <li class="toctree-l4"><a class="reference internal" href="api/operations/collective-operations/broadcast.html">Broadcast</a></li>
-<li class="toctree-l4"><a class="reference internal" href="api/operations/collective-operations/group-call.html">Group Calls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/operations/collective-operations/group-call.html">Group calls</a></li>
 <li class="toctree-l4"><a class="reference internal" href="api/operations/collective-operations/reduce.html">Reduce</a></li>
 <li class="toctree-l4"><a class="reference internal" href="api/operations/collective-operations/reduce-scatter.html">ReduceScatter</a></li>
 </ul>
@@ -410,28 +413,25 @@ document.write(`
                   
   <section id="product-full">
 <h1>Intel&#174; oneAPI Collective Communications Library<a class="headerlink" href="#product-full" title="Permalink to this headline">#</a></h1>
-<p>Intel&#174; oneAPI Collective Communications Library (oneCCL) provides an efficient implementation of communication patterns used in deep learning.</p>
-<p>oneCCL features include:</p>
-<ul class="simple">
-<li><p>Built on top of lower-level communication middleware &#8211; <a class="reference external" href="https://www.intel.com/content/www/us/en/developer/tools/oneapi/mpi-library.html">Intel&#174; MPI Library</a> and <a class="reference external" href="https://github.com/ofiwg/libfabric">libfabrics</a>.</p></li>
-<li><p>Optimized to drive scalability of communication patterns by allowing to easily trade off compute for communication performance.</p></li>
-<li><p>Works across various interconnects: InfiniBand*, Cornelis Networks*, and Ethernet.</p></li>
-<li><p>Provides common API sufficient to support communication workflows within Deep Learning / distributed frameworks (such as <a class="reference external" href="https://github.com/pytorch/pytorch">PyTorch*</a>, <a class="reference external" href="https://github.com/horovod/horovod">Horovod*</a>).</p></li>
+<div class="toctree-wrapper compound">
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">About</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="release-notes.html">Release Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
 </ul>
-<p>oneCCL package comprises the oneCCL Software Development Kit (SDK) and the Intel&#174; MPI Library Runtime components.</p>
+</div>
 <div class="toctree-wrapper compound">
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Get Started</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="introduction/release-notes.html">Release Notes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="introduction/installation.html">Installation Guide</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="introduction/installation.html">Install oneCCL from Source</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="introduction/installation.html#system-requirements">System Requirements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="introduction/installation.html#installation-using-command-line-interface">Installation using Command Line Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction/installation.html#installation-using-cli">Installation using CLI</a></li>
 <li class="toctree-l2"><a class="reference internal" href="introduction/installation.html#learn-more">Learn More</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="introduction/sample.html">Sample Application</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="introduction/sample.html#build-details">Build details</a></li>
-<li class="toctree-l2"><a class="reference internal" href="introduction/sample.html#run-the-sample">Run the sample</a></li>
+<li class="toctree-l1"><a class="reference internal" href="introduction/sample.html">Build a Sample Application</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="introduction/sample.html#build-the-library">Build the Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction/sample.html#run-the-sample">Run the Sample</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="introduction/cmake-configuration.html">Use oneCCL package from CMake</a><ul>
@@ -446,7 +446,6 @@ document.write(`
 <li class="toctree-l1"><a class="reference internal" href="programming-model.html">Programming Model</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="programming-model/host-communication.html">Host Communication</a></li>
 <li class="toctree-l2"><a class="reference internal" href="programming-model/device-communication.html">Device Communication</a></li>
-<li class="toctree-l2"><a class="reference internal" href="programming-model/limitations.html">Limitations</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="general-configuration.html">General Configuration</a><ul>
@@ -479,10 +478,11 @@ document.write(`
 <li class="toctree-l1"><a class="reference internal" href="env-variables.html">Environment Variables</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="env-variables.html#collective-algorithms-selection">Collective Algorithms Selection</a></li>
 <li class="toctree-l2"><a class="reference internal" href="env-variables.html#workers">Workers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="env-variables.html#kvs">KVS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="env-variables.html#atl">ATL</a></li>
 <li class="toctree-l2"><a class="reference internal" href="env-variables.html#multi-nic">Multi-NIC</a></li>
 <li class="toctree-l2"><a class="reference internal" href="env-variables.html#inter-process-communication-ipc">Inter Process Communication (IPC)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="env-variables.html#low-precision-datatypes">Low-precision datatypes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="env-variables.html#low-precision-data-types">Low-precision Data Types</a></li>
 <li class="toctree-l2"><a class="reference internal" href="env-variables.html#ccl-log-level">CCL_LOG_LEVEL</a></li>
 <li class="toctree-l2"><a class="reference internal" href="env-variables.html#ccl-itt-level">CCL_ITT_LEVEL</a></li>
 <li class="toctree-l2"><a class="reference internal" href="env-variables.html#fusion">Fusion</a></li>
@@ -530,7 +530,7 @@ document.write(`
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="right-next"
-       href="introduction/release-notes.html"
+       href="release-notes.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
@@ -566,7 +566,7 @@ By Intel
     
   <p class="copyright">
     
-      &#169; Copyright 2023.
+      &#169; Copyright 2025.
       <br/>
     
   </p>

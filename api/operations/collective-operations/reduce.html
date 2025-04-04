@@ -46,7 +46,7 @@
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="ReduceScatter" href="reduce-scatter.html" />
-    <link rel="prev" title="Group Calls" href="group-call.html" />
+    <link rel="prev" title="Group calls" href="group-call.html" />
     <script defer type="text/javascript" src="https://www.intel.com/content/dam/www/global/wap/performance-config.js" ></script>
     <script type="text/javascript">
         // Configure TMS settings
@@ -141,11 +141,15 @@
 </a></div>
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Get Started</span></p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">About</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../../../introduction/release-notes.html">Release Notes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../introduction/installation.html">Installation Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../introduction/sample.html">Sample Application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../release-notes.html">Release Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../introduction.html">Introduction</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Get Started</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../introduction/installation.html">Install oneCCL from Source</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../introduction/sample.html">Build a Sample Application</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../introduction/cmake-configuration.html">Use oneCCL package from CMake</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Developer Guide</span></p>
@@ -153,7 +157,6 @@
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../../programming-model.html">Programming Model</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../programming-model/host-communication.html">Host Communication</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../programming-model/device-communication.html">Device Communication</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../programming-model/limitations.html">Limitations</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../../general-configuration.html">General Configuration</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -194,7 +197,7 @@
 <li class="toctree-l4"><a class="reference internal" href="alltoallv.html">Alltoallv</a></li>
 <li class="toctree-l4"><a class="reference internal" href="barrier.html">Barrier</a></li>
 <li class="toctree-l4"><a class="reference internal" href="broadcast.html">Broadcast</a></li>
-<li class="toctree-l4"><a class="reference internal" href="group-call.html">Group Calls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group-call.html">Group calls</a></li>
 <li class="toctree-l4 current active"><a class="current reference internal" href="#">Reduce</a></li>
 <li class="toctree-l4"><a class="reference internal" href="reduce-scatter.html">ReduceScatter</a></li>
 </ul>
@@ -425,7 +428,7 @@ document.write(`
 <li><p><strong>rtype</strong> &#8211; the type of the reduction operation to be applied </p></li>
 <li><p><strong>root</strong> &#8211; the rank that gets the result of reduction </p></li>
 <li><p><strong>comm</strong> &#8211; the communicator for which the operation will be performed </p></li>
-<li><p><strong>stream</strong> &#8211; abstraction over a device queue constructed via ccl::create_stream </p></li>
+<li><p><strong>stream</strong> &#8211; abstraction over a device queue constructed via ccl::create_stream</p></li>
 <li><p><strong>attr</strong> &#8211; optional attributes to customize operation </p></li>
 <li><p><strong>deps</strong> &#8211; an optional vector of the events that the operation should depend on </p></li>
 </ul>
@@ -490,7 +493,7 @@ document.write(`
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Group Calls</p>
+        <p class="prev-next-title">Group calls</p>
       </div>
     </a>
     <a class="right-next"
@@ -530,7 +533,7 @@ By Intel
     
   <p class="copyright">
     
-      &#169; Copyright 2023.
+      &#169; Copyright 2025.
       <br/>
     
   </p>

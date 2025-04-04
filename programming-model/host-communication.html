@@ -142,11 +142,15 @@
 </a></div>
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Get Started</span></p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">About</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../introduction/release-notes.html">Release Notes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../introduction/installation.html">Installation Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../introduction/sample.html">Sample Application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../release-notes.html">Release Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Get Started</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../introduction/installation.html">Install oneCCL from Source</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/sample.html">Build a Sample Application</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../introduction/cmake-configuration.html">Use oneCCL package from CMake</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Developer Guide</span></p>
@@ -154,7 +158,6 @@
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../programming-model.html">Programming Model</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Host Communication</a></li>
 <li class="toctree-l2"><a class="reference internal" href="device-communication.html">Device Communication</a></li>
-<li class="toctree-l2"><a class="reference internal" href="limitations.html">Limitations</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../general-configuration.html">General Configuration</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -195,7 +198,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../api/operations/collective-operations/alltoallv.html">Alltoallv</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../api/operations/collective-operations/barrier.html">Barrier</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../api/operations/collective-operations/broadcast.html">Broadcast</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../api/operations/collective-operations/group-call.html">Group Calls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/operations/collective-operations/group-call.html">Group calls</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../api/operations/collective-operations/reduce.html">Reduce</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../api/operations/collective-operations/reduce-scatter.html">ReduceScatter</a></li>
 </ul>
@@ -385,7 +388,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -401,6 +406,14 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#additional-resources">Additional Resources</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -412,28 +425,17 @@ document.write(`
                   
   <section id="host-communication">
 <h1>Host Communication<a class="headerlink" href="#host-communication" title="Permalink to this headline">#</a></h1>
-<p>The communication operations between processes are provided by <a class="reference external" href="https://oneapi-spec.uxlfoundation.org/specifications/oneapi/latest/elements/oneccl/source/spec/main_objects#communicator">Communicator</a>.</p>
-<p>The example below demonstrates the main concepts of communication on host memory buffers.</p>
-<p class="rubric">Example</p>
+<p>The oneCCL Communicator defines a group of processes that communicate with each other.</p>
+<p>The following example demonstrates communication between two processes on host memory buffers.</p>
 <p>Consider a simple oneCCL <code class="docutils literal notranslate"><span class="pre">allreduce</span></code> example for CPU.</p>
+<p class="rubric">Example</p>
 <ol class="arabic">
-<li><p>Create a communicator object with user-supplied size, rank, and key-value store:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">auto</span><span class="w"> </span><span class="n">ccl_context</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ccl</span><span class="o">::</span><span class="n">create_context</span><span class="p">();</span>
-<span class="k">auto</span><span class="w"> </span><span class="n">ccl_device</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ccl</span><span class="o">::</span><span class="n">create_device</span><span class="p">();</span>
-
-<span class="k">auto</span><span class="w"> </span><span class="n">comms</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ccl</span><span class="o">::</span><span class="n">create_communicators</span><span class="p">(</span>
-<span class="w">   </span><span class="n">size</span><span class="p">,</span>
-<span class="w">   </span><span class="n">vector_class</span><span class="o">&lt;</span><span class="n">pair_class</span><span class="o">&lt;</span><span class="kt">size_t</span><span class="p">,</span><span class="w"> </span><span class="n">device</span><span class="o">&gt;&gt;</span><span class="p">{</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">rank</span><span class="p">,</span><span class="w"> </span><span class="n">ccl_device</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">},</span>
-<span class="w">   </span><span class="n">ccl_context</span><span class="p">,</span>
-<span class="w">   </span><span class="n">kvs</span><span class="p">);</span>
-</pre></div>
-</div>
-<p>Or for convenience use non-vector form without device and context parameters.</p>
+<li><p>Create a communicator object and provide the size, rank, and key-value store values:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">auto</span><span class="w"> </span><span class="n">comm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ccl</span><span class="o">::</span><span class="n">create_communicator</span><span class="p">(</span><span class="n">size</span><span class="p">,</span><span class="w"> </span><span class="n">rank</span><span class="p">,</span><span class="w"> </span><span class="n">kvs</span><span class="p">);</span>
 </pre></div>
 </div>
 </li>
-<li><p>Initialize <code class="docutils literal notranslate"><span class="pre">send_buf</span></code> (in real scenario it is supplied by the user):</p>
+<li><p>Initialize <code class="docutils literal notranslate"><span class="pre">send_buf</span></code> by providing the input content. For example, you can create and initialize the <code class="docutils literal notranslate"><span class="pre">send_buf</span></code> parameter as follows:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">const</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">elem_count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&lt;</span><span class="n">N</span><span class="o">&gt;</span><span class="p">;</span>
 
 <span class="cm">/* initialize send_buf */</span>
@@ -442,10 +444,11 @@ document.write(`
 <span class="p">}</span>
 </pre></div>
 </div>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">allreduce</span></code> invocation performs the reduction of values from all the processes and then distributes the result to all the processes. In this case, the result is an array with <code class="docutils literal notranslate"><span class="pre">elem_count</span></code> elements, where all elements are equal to the sum of arithmetical progression:</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">allreduce</span></code> invocation performs the reduction of values from all the processes and then distributes the result to all the processes. In this case, the result is an array with the <code class="docutils literal notranslate"><span class="pre">elem_count</span></code> elements, where all elements are equal to the sum of the arithmetical progression:</p>
 <div class="math notranslate nohighlight">
 \[p \cdot (p + 1) / 2\]</div>
+</li>
+<li><p>Execute the <code class="docutils literal notranslate"><span class="pre">allreduce</span></code> operation:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ccl</span><span class="o">::</span><span class="n">allreduce</span><span class="p">(</span><span class="n">send_buf</span><span class="p">,</span>
 <span class="w">               </span><span class="n">recv_buf</span><span class="p">,</span>
 <span class="w">               </span><span class="n">elem_count</span><span class="p">,</span>
@@ -453,8 +456,12 @@ document.write(`
 <span class="w">               </span><span class="n">comm</span><span class="p">).</span><span class="n">wait</span><span class="p">();</span>
 </pre></div>
 </div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The oneCCL operations are asynchronous and the memory buffers must remain intact until all operations are completed. You can free up memory associated with the buffers when an operation completes.</p>
+</div>
 </li>
-<li><p>Check the correctness of <code class="docutils literal notranslate"><span class="pre">allreduce</span></code> operation:</p>
+<li><p>Verify that the <code class="docutils literal notranslate"><span class="pre">allreduce</span></code> operation is correct:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">auto</span><span class="w"> </span><span class="n">comm_size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">comm</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
 <span class="k">auto</span><span class="w"> </span><span class="n">expected</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">comm_size</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">comm_size</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
 
@@ -468,6 +475,14 @@ document.write(`
 </div>
 </li>
 </ol>
+<p>If you encounter an error, make sure the oneCCL environment is configured correctly.</p>
+<section id="additional-resources">
+<h2>Additional Resources<a class="headerlink" href="#additional-resources" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://uxlfoundation.github.io/oneAPI-spec/spec/elements/oneCCL/source/spec/main_objects.html#communicator">OneCCL Communicator</a></p></li>
+<li><p><a class="reference external" href="https://uxlfoundation.github.io/oneAPI-spec/spec/elements/oneCCL/source/spec/collective_operations.html#allreduce">OneCCL ALLREDUCE communication pattern</a></p></li>
+</ul>
+</section>
 </section>
 
 
@@ -510,6 +525,20 @@ document.write(`
             
             
               
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#additional-resources">Additional Resources</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
             
           </div>
           <footer class="bd-footer-content">
@@ -528,7 +557,7 @@ By Intel
     
   <p class="copyright">
     
-      &#169; Copyright 2023.
+      &#169; Copyright 2025.
       <br/>
     
   </p>

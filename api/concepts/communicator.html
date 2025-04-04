@@ -141,11 +141,15 @@
 </a></div>
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Get Started</span></p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">About</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../../introduction/release-notes.html">Release Notes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../introduction/installation.html">Installation Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../introduction/sample.html">Sample Application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../release-notes.html">Release Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction.html">Introduction</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Get Started</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../introduction/installation.html">Install oneCCL from Source</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction/sample.html">Build a Sample Application</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../introduction/cmake-configuration.html">Use oneCCL package from CMake</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Developer Guide</span></p>
@@ -153,7 +157,6 @@
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../programming-model.html">Programming Model</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../programming-model/host-communication.html">Host Communication</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../programming-model/device-communication.html">Device Communication</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../programming-model/limitations.html">Limitations</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../general-configuration.html">General Configuration</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -194,7 +197,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../operations/collective-operations/alltoallv.html">Alltoallv</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../operations/collective-operations/barrier.html">Barrier</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../operations/collective-operations/broadcast.html">Broadcast</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../operations/collective-operations/group-call.html">Group Calls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../operations/collective-operations/group-call.html">Group calls</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../operations/collective-operations/reduce.html">Reduce</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../operations/collective-operations/reduce-scatter.html">ReduceScatter</a></li>
 </ul>
@@ -435,7 +438,7 @@ document.write(`
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp">
-<span class="sig-name descname"><span class="pre">template&lt;class</span> <span class="pre">DeviceType,</span> <span class="pre">class</span> <span class="pre">ContextType&gt;</span> <span class="pre">vector_class&lt;</span> <span class="pre">communicator</span> <span class="pre">&gt;</span> <span class="pre">CCL_API</span> <span class="pre">create_communicators</span> <span class="pre">(int</span> <span class="pre">size,</span> <span class="pre">const</span> <span class="pre">vector_class&lt;</span> <span class="pre">pair_class&lt;</span> <span class="pre">int,</span> <span class="pre">DeviceType</span> <span class="pre">&gt;&gt;</span> <span class="pre">&amp;devices,</span> <span class="pre">const</span> <span class="pre">ContextType</span> <span class="pre">&amp;context,</span> <span class="pre">shared_ptr_class&lt;</span> <span class="pre">kvs_interface</span> <span class="pre">&gt;</span> <span class="pre">kvs,</span> <span class="pre">const</span> <span class="pre">comm_attr</span> <span class="pre">&amp;attr=default_comm_attr)</span></span></dt>
+<span class="sig-name descname"><span class="pre">template&lt;class</span> <span class="pre">DeviceType,</span> <span class="pre">class</span> <span class="pre">ContextType&gt;</span> <span class="pre">vector_class&lt;</span> <span class="pre">communicator</span> <span class="pre">&gt;</span> <span class="pre">CCL_API</span> <span class="pre">create_communicators</span> <span class="pre">(int</span> <span class="pre">size,</span> <span class="pre">const</span> <span class="pre">vector_class&lt;</span> <span class="pre">pair_class&lt;</span> <span class="pre">int,</span> <span class="pre">DeviceType</span> <span class="pre">&gt;</span> <span class="pre">&gt;</span> <span class="pre">&amp;devices,</span> <span class="pre">const</span> <span class="pre">ContextType</span> <span class="pre">&amp;context,</span> <span class="pre">shared_ptr_class&lt;</span> <span class="pre">kvs_interface</span> <span class="pre">&gt;</span> <span class="pre">kvs,</span> <span class="pre">const</span> <span class="pre">comm_attr</span> <span class="pre">&amp;attr=default_comm_attr)</span></span></dt>
 <dd><p>Creates new communicators with user supplied size, ranks, local device-rank mapping and kvs. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -464,6 +467,12 @@ document.write(`
 <dl class="cpp function">
 <dt class="sig sig-object cpp">
 <span class="sig-name descname"><span class="pre">template&lt;class</span> <span class="pre">DeviceType,</span> <span class="pre">class</span> <span class="pre">ContextType&gt;</span> <span class="pre">communicator</span> <span class="pre">CCL_API</span> <span class="pre">create_communicator</span> <span class="pre">(int</span> <span class="pre">size,</span> <span class="pre">int</span> <span class="pre">rank,</span> <span class="pre">DeviceType</span> <span class="pre">&amp;device,</span> <span class="pre">const</span> <span class="pre">ContextType</span> <span class="pre">&amp;context,</span> <span class="pre">shared_ptr_class&lt;</span> <span class="pre">kvs_interface</span> <span class="pre">&gt;</span> <span class="pre">kvs,</span> <span class="pre">const</span> <span class="pre">comm_attr</span> <span class="pre">&amp;attr=default_comm_attr)</span></span></dt>
+<dd><p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp">
+<span class="sig-name descname"><span class="pre">template&lt;class</span> <span class="pre">DeviceType,</span> <span class="pre">class</span> <span class="pre">ContextType&gt;</span> <span class="pre">communicator</span> <span class="pre">CCL_API</span> <span class="pre">create_communicatorExt</span> <span class="pre">(int</span> <span class="pre">size,</span> <span class="pre">int</span> <span class="pre">rank,</span> <span class="pre">DeviceType</span> <span class="pre">&amp;device,</span> <span class="pre">const</span> <span class="pre">ContextType</span> <span class="pre">&amp;context,</span> <span class="pre">shared_ptr_class&lt;</span> <span class="pre">kvs_interface</span> <span class="pre">&gt;</span> <span class="pre">kvs,</span> <span class="pre">const</span> <span class="pre">comm_attr</span> <span class="pre">&amp;attr=default_comm_attr)</span></span></dt>
 <dd><p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. </p>
 </dd></dl>
 
@@ -516,14 +525,34 @@ document.write(`
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp">
-<span class="sig-name descname"><span class="pre">vector_class&lt;</span> <span class="pre">communicator</span> <span class="pre">&gt;</span> <span class="pre">CCL_API</span> <span class="pre">split_communicators</span> <span class="pre">(const</span> <span class="pre">vector_class&lt;</span> <span class="pre">pair_class&lt;</span> <span class="pre">communicator,</span> <span class="pre">comm_split_attr</span> <span class="pre">&gt;&gt;</span> <span class="pre">&amp;attrs)</span></span></dt>
+<span class="sig-name descname"><span class="pre">vector_class&lt;</span> <span class="pre">communicator</span> <span class="pre">&gt;</span> <span class="pre">CCL_API</span> <span class="pre">split_communicators</span> <span class="pre">(const</span> <span class="pre">vector_class&lt;</span> <span class="pre">pair_class&lt;</span> <span class="pre">communicator,</span> <span class="pre">comm_split_attr</span> <span class="pre">&gt;</span> <span class="pre">&gt;</span> <span class="pre">&amp;attrs)</span></span></dt>
 <dd><p>Splits communicators according to attributes. </p>
+<p>This API is deprecated as of version 2021.15.0. It will be removed in a future release.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>attrs</strong> &#8211; split attributes for local communicators </p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>vector of communicators </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp">
+<span class="sig-name descname"><span class="pre">communicator</span> <span class="pre">CCL_API</span> <span class="pre">split_communicator</span> <span class="pre">(const</span> <span class="pre">communicator</span> <span class="pre">&amp;comm,</span> <span class="pre">int</span> <span class="pre">color,</span> <span class="pre">int</span> <span class="pre">key)</span></span></dt>
+<dd><p>Creates a new sub-communicator from an existing communicator. </p>
+<p>Creates one or more new communicators from an existing communicator. All ranks providing the same <code class="docutils literal notranslate"><span class="pre">color</span></code> will be placed in the same sub-communicator. Ranks within each sub-communicator are ordered according to the <code class="docutils literal notranslate"><span class="pre">key</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>comm</strong> &#8211; existing communicator from which the new subcommunicator(s) will be derived </p></li>
+<li><p><strong>color</strong> &#8211; determines which sub-communicator the calling rank is assigned to. Ranks with the same color will be on the same sub-communicator. If the color is different, the ranks will be on different sub-communicators. </p></li>
+<li><p><strong>key</strong> &#8211; defines the rank ordering within the new sub-communicator. Ranks in the new communicator are sorted by ascending <code class="docutils literal notranslate"><span class="pre">key</span></code>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the newly created sub-communicator </p>
 </dd>
 </dl>
 </dd></dl>
@@ -588,7 +617,7 @@ By Intel
     
   <p class="copyright">
     
-      &#169; Copyright 2023.
+      &#169; Copyright 2025.
       <br/>
     
   </p>

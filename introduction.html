@@ -9,7 +9,7 @@
     <meta charset="ascii" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Advanced Configuration &#8212; oneCCL  documentation</title>
+    <title>Introduction &#8212; oneCCL  documentation</title>
   
   
   
@@ -45,8 +45,8 @@
     <link rel="shortcut icon" href="_static/favicons.png"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Selection of Collective Algorithms" href="advanced-configuration/collective-algorithms-selection.html" />
-    <link rel="prev" title="Transport Selection" href="general-configuration/transport-selection.html" />
+    <link rel="next" title="Install oneCCL from Source" href="introduction/installation.html" />
+    <link rel="prev" title="Release Notes" href="release-notes.html" />
     <script defer type="text/javascript" src="https://www.intel.com/content/dam/www/global/wap/performance-config.js" ></script>
     <script type="text/javascript">
         // Configure TMS settings
@@ -142,9 +142,9 @@
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">About</span></p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="release-notes.html">Release Notes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Introduction</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Get Started</span></p>
 <ul class="nav bd-sidenav">
@@ -153,7 +153,7 @@
 <li class="toctree-l1"><a class="reference internal" href="introduction/cmake-configuration.html">Use oneCCL package from CMake</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Developer Guide</span></p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="programming-model.html">Programming Model</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="programming-model/host-communication.html">Host Communication</a></li>
 <li class="toctree-l2"><a class="reference internal" href="programming-model/device-communication.html">Device Communication</a></li>
@@ -164,7 +164,7 @@
 <li class="toctree-l2"><a class="reference internal" href="general-configuration/transport-selection.html">Transport Selection</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Advanced Configuration</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="advanced-configuration.html">Advanced Configuration</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="advanced-configuration/collective-algorithms-selection.html">Selection of Collective Algorithms</a></li>
 <li class="toctree-l2"><a class="reference internal" href="advanced-configuration/low-precision-datatypes.html">Low-precision Datatypes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="advanced-configuration/operation-caching.html">Caching of Communication Operations</a></li>
@@ -271,7 +271,7 @@
       
       
       
-      <li><a href="https://github.com/oneapi-src/oneCCL/edit/master/doc/rst/source/advanced-configuration.rst" target="_blank"
+      <li><a href="https://github.com/oneapi-src/oneCCL/edit/master/doc/rst/source/introduction.rst" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -288,7 +288,7 @@
       
       
       
-      <li><a href="https://github.com/oneapi-src/oneCCL/issues/new?title=Issue%20on%20page%20%2Fadvanced-configuration.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/oneapi-src/oneCCL/issues/new?title=Issue%20on%20page%20%2Fintroduction.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -318,7 +318,7 @@
       
       
       
-      <li><a href="_sources/advanced-configuration.rst" target="_blank"
+      <li><a href="_sources/introduction.rst" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -398,7 +398,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Advanced Configuration</h1>
+    <h1>Introduction</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -412,18 +412,17 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section id="advanced-configuration">
-<h1>Advanced Configuration<a class="headerlink" href="#advanced-configuration" title="Permalink to this headline">#</a></h1>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="advanced-configuration/collective-algorithms-selection.html">Selection of Collective Algorithms</a></li>
-<li class="toctree-l1"><a class="reference internal" href="advanced-configuration/low-precision-datatypes.html">Low-precision Datatypes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="advanced-configuration/operation-caching.html">Caching of Communication Operations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="advanced-configuration/operation-prioritization.html">Prioritization of Communication Operations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="advanced-configuration/operation-fusion.html">Fusion of Communication Operations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="advanced-configuration/dmabuf.html">Enabling OFI/verbs/dmabuf Support</a></li>
+  <section id="introduction">
+<h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h1>
+<p>Intel&#174; oneAPI Collective Communications Library (oneCCL) provides an efficient implementation of communication patterns used in deep learning.</p>
+<p>oneCCL features include:</p>
+<ul class="simple">
+<li><p>Built on top of lower-level communication middleware &#8211; <a href="#id1"><span class="problematic" id="id2">|mpi|_</span></a> and <a class="reference external" href="https://github.com/ofiwg/libfabric">libfabrics</a>.</p></li>
+<li><p>Optimized to drive scalability of communication patterns. It supports collectives and point-to-point (send/receive) primitives.</p></li>
+<li><p>Works across various interconnects: InfiniBand*, Cornelis Networks*, and Ethernet.</p></li>
+<li><p>Provides common API sufficient to support communication workflows within Deep Learning / distributed frameworks (such as <a class="reference external" href="https://github.com/pytorch/pytorch">PyTorch*</a>, <a class="reference external" href="https://github.com/horovod/horovod">Horovod*</a>).</p></li>
 </ul>
-</div>
+<p>oneCCL package comprises the oneCCL Software Development Kit (SDK) and the Intel&#174; MPI Library Runtime components.</p>
 </section>
 
 
@@ -439,20 +438,20 @@ document.write(`
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="general-configuration/transport-selection.html"
+       href="release-notes.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Transport Selection</p>
+        <p class="prev-next-title">Release Notes</p>
       </div>
     </a>
     <a class="right-next"
-       href="advanced-configuration/collective-algorithms-selection.html"
+       href="introduction/installation.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Selection of Collective Algorithms</p>
+        <p class="prev-next-title">Install oneCCL from Source</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
