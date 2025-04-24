@@ -25,7 +25,7 @@ author = 'Intel'
 # release = '2022'
 
 rst_prolog = """
-.. |product_full| replace:: Intel\ |reg|\  oneAPI Collective Communications Library
+.. |product_full| replace:: oneAPI Collective Communications Library
 .. |product_short| replace:: oneCCL
 .. |mpi| replace:: Intel\ |reg|\  MPI Library
 .. |reg| unicode:: U+000AE
