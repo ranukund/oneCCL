@@ -1,0 +1,33 @@
+name: oneCCL
+'on':
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: install dependencies
+      run: |
+        sudo apt-get update
+        DEBIAN_FRONTEND=noninteractive TZ=Etc/UTC sudo apt-get install -y python3-setuptools python3-pip wget python3.12-venv doxygen texlive-extra-utils texlive-latex-extra texlive-science dvipng
+        python3 -m venv .venv
+        . .venv/bin/activate
+        pip3 install -r doc/requirements.txt
+    - name: build docs
+      run: |
+        . .venv/bin/activate
+        cd doc
+        doxygen Doxyfile
+        sphinx-build -b html -d doctrees rst/source build/html
+    - name: push to gh-pages
+      uses: peaceiris/actions-gh-pages@v4
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./doc/build/html
+
