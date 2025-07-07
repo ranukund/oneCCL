@@ -1,4 +1,3 @@
-.. _mpi: https://www.intel.com/content/www/us/en/developer/tools/oneapi/mpi-library.html
 
 =======================================================
 |product_full|

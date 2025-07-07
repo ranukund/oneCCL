@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" data-content_root="./" >
 
   <head>
     <meta charset="ascii" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Environment Variables &#8212; oneCCL  documentation</title>
   
@@ -15,34 +14,36 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
   
-  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
-    <link rel="shortcut icon" href="_static/favicons.png"/>
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'env-variables';</script>
+    <link rel="icon" href="_static/favicons.png"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="oneCCL Benchmark Collective User Guide" href="benchmark-guide/benchmark.html" />
@@ -68,19 +69,23 @@
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
@@ -102,12 +107,20 @@
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -122,9 +135,13 @@
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
+  
+    
   
 
 <a class="navbar-brand logo" href="index.html">
+  
   
   
   
@@ -134,12 +151,25 @@
       
     
     
-    <img src="_static/oneAPI-rgb-rev-100.png" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="_static/oneAPI-rgb-rev-100.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+    <img src="_static/oneAPI-rgb-rev-100.png" class="logo__image only-light" alt=""/>
+    <script>document.write(`<img src="_static/oneAPI-rgb-rev-100.png" class="logo__image only-dark" alt=""/>`);</script>
   
+  
+    <p class="title logo__title">oneCCL Documentation 2021.16</p>
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">About</span></p>
 <ul class="nav bd-sidenav">
@@ -154,17 +184,17 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Developer Guide</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="programming-model.html">Programming Model</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="programming-model.html">Programming Model</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="programming-model/host-communication.html">Host Communication</a></li>
 <li class="toctree-l2"><a class="reference internal" href="programming-model/device-communication.html">Device Communication</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="general-configuration.html">General Configuration</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="general-configuration.html">General Configuration</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="general-configuration/operation-execution.html">Execution of Communication Operations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="general-configuration/transport-selection.html">Transport Selection</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="advanced-configuration.html">Advanced Configuration</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="advanced-configuration.html">Advanced Configuration</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="advanced-configuration/collective-algorithms-selection.html">Selection of Collective Algorithms</a></li>
 <li class="toctree-l2"><a class="reference internal" href="advanced-configuration/low-precision-datatypes.html">Low-precision Datatypes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="advanced-configuration/operation-caching.html">Caching of Communication Operations</a></li>
@@ -172,13 +202,13 @@
 <li class="toctree-l2"><a class="reference internal" href="advanced-configuration/operation-fusion.html">Fusion of Communication Operations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="advanced-configuration/dmabuf.html">Enabling OFI/verbs/dmabuf Support</a></li>
 </ul>
-</li>
+</details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Developer Reference</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="api.html">oneCCL API</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="api.html">oneCCL API</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="api/initialization.html">Initialization</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="api/concepts.html">oneCCL Concepts</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="api/concepts.html">oneCCL Concepts</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="api/concepts/communicator.html">Communicator</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api/concepts/context.html">Context</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api/concepts/device.html">Device</a></li>
@@ -186,10 +216,10 @@
 <li class="toctree-l3"><a class="reference internal" href="api/concepts/kvs.html">Key-value Store</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api/concepts/stream.html">Stream</a></li>
 </ul>
-</li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="api/operations.html">Communication Operations</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="api/operations.html">Communication Operations</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="api/operations/datatypes.html">Datatypes</a></li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="api/operations/collective-operations.html">Collective Operations</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="api/operations/collective-operations.html">Collective Operations</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l4"><a class="reference internal" href="api/operations/collective-operations/allgather.html">Allgather</a></li>
 <li class="toctree-l4"><a class="reference internal" href="api/operations/collective-operations/allgatherv.html">Allgatherv</a></li>
 <li class="toctree-l4"><a class="reference internal" href="api/operations/collective-operations/allreduce.html">Allreduce</a></li>
@@ -201,12 +231,12 @@
 <li class="toctree-l4"><a class="reference internal" href="api/operations/collective-operations/reduce.html">Reduce</a></li>
 <li class="toctree-l4"><a class="reference internal" href="api/operations/collective-operations/reduce-scatter.html">ReduceScatter</a></li>
 </ul>
-</li>
+</details></li>
 <li class="toctree-l3"><a class="reference internal" href="api/operations/point-to-point.html">Point-To-Point Operations</a></li>
 </ul>
-</li>
+</details></li>
 </ul>
-</li>
+</details></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Environment Variables</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Benchmark User Guide</span></p>
@@ -232,7 +262,7 @@
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
 
@@ -241,14 +271,14 @@
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -370,26 +400,28 @@
 </button>
 
 
+
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
   </button>
 `);
 </script>
 
+
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -416,6 +448,7 @@ document.write(`
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#ccl-allgather-ccl-allgatherv">CCL_ALLGATHER/CCL_ALLGATHERV</a></li>
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#ccl-allgatherv-monolithic-pipeline-kernel">CCL_ALLGATHERV_MONOLITHIC_PIPELINE_KERNEL</a></li>
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#ccl-allgather-scaleout-ccl-allgatherv-scaleout">CCL_ALLGATHER_SCALEOUT/CCL_ALLGATHERV_SCALEOUT</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#ccl-sycl-allgatherv-scaleout">CCL_SYCL_ALLGATHERV_SCALEOUT</a></li>
 </ul>
 </li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#allreduce">ALLREDUCE</a><ul class="nav section-nav flex-column">
@@ -445,7 +478,7 @@ document.write(`
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#ccl-reduce-scaleout-gpu-buffers-only">CCL_REDUCE_SCALEOUT (GPU buffers only)</a></li>
 </ul>
 </li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#reduce-scatter">REDUCE_SCATTER</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#reduce-scatter">REDUCE SCATTER</a><ul class="nav section-nav flex-column">
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#ccl-reduce-scatter">CCL_REDUCE_SCATTER</a></li>
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">CCL_REDUCE_SCATTER_MONOLITHIC_PIPELINE_KERNEL (GPU buffers only)</a></li>
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#ccl-reduce-scatter-scaleout-gpu-buffers-only">CCL_REDUCE_SCATTER_SCALEOUT (GPU buffers only)</a></li>
@@ -472,7 +505,13 @@ document.write(`
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#ccl-sycl-allreduce-scaleout">CCL_SYCL_ALLREDUCE_SCALEOUT</a></li>
 </ul>
 </li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">REDUCE_SCATTER</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">BROADCAST</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#ccl-sycl-broadcast-tmp-buf">CCL_SYCL_BROADCAST_TMP_BUF</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#ccl-sycl-broadcast-small-threshold">CCL_SYCL_BROADCAST_SMALL_THRESHOLD</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#ccl-sycl-broadcast-scaleout-threshold">CCL_SYCL_BROADCAST_SCALEOUT_THRESHOLD</a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">REDUCE SCATTER</a><ul class="nav section-nav flex-column">
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#ccl-sycl-reduce-scatter-tmp-buf">CCL_SYCL_REDUCE_SCATTER_TMP_BUF</a></li>
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#ccl-sycl-reduce-scatter-small-threshold">CCL_SYCL_REDUCE_SCATTER_SMALL_THRESHOLD</a></li>
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#ccl-sycl-reduce-scatter-scaleout-direct-threshold">CCL_SYCL_REDUCE_SCATTER_SCALEOUT_DIRECT_THRESHOLD</a></li>
@@ -498,6 +537,9 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ccl-atl-transport">CCL_ATL_TRANSPORT</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ccl-atl-hmem">CCL_ATL_HMEM</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ccl-atl-shm">CCL_ATL_SHM</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#process-launcher">PROCESS LAUNCHER</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ccl-process-launcher">CCL_PROCESS_LAUNCHER</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ccl-local-size">CCL_LOCAL_SIZE</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ccl-local-rank">CCL_LOCAL_RANK</a></li>
@@ -523,7 +565,11 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ccl-log-level">CCL_LOG_LEVEL</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ccl-itt-level">CCL_ITT_LEVEL</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#profiling">Profiling</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ccl-itt-level">CCL_ITT_LEVEL</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ccl-profiling-enable">CCL_PROFILING_ENABLE</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fusion">Fusion</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ccl-fusion">CCL_FUSION</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ccl-fusion-bytes-threshold">CCL_FUSION_BYTES_THRESHOLD</a></li>
@@ -550,45 +596,60 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section id="environment-variables">
-<h1>Environment Variables<a class="headerlink" href="#environment-variables" title="Permalink to this headline">#</a></h1>
+<h1>Environment Variables<a class="headerlink" href="#environment-variables" title="Link to this heading">#</a></h1>
 <section id="collective-algorithms-selection">
-<span id="id1"></span><h2>Collective Algorithms Selection<a class="headerlink" href="#collective-algorithms-selection" title="Permalink to this headline">#</a></h2>
+<span id="id1"></span><h2>Collective Algorithms Selection<a class="headerlink" href="#collective-algorithms-selection" title="Link to this heading">#</a></h2>
 <p>oneCCL supports collective operations for the host (CPU) memory buffers and
 device (GPU) memory buffers. In addition, oneCCL has two different paths to
-support collectives with GPU buffers; one directly uses Level Zero, and the
-other uses SYCL. The SYCL path is a new code being developed and not all
-collectives are supported.</p>
-<p>For the Level Zero implementation, in the case of GPU buffers, oneCCL
-collectives are optimized to execute a hierarchical algorithm composed of an
-optimized scale-up phase (communication between ranks/processes in the same
-node) and a scaleout phase (communication between ranks/processes on different
-nodes). In the case of CPU buffers, the current collective algorithms do not
-have support for scale-up and scaleout phases; only a non-hierarchical
-algorithm can be chosen.</p>
-<p>With <code class="docutils literal notranslate"><span class="pre">CCL_&lt;coll_name&gt;</span> <span class="pre">=</span> <span class="pre">&lt;algo_name&gt;</span></code>, you can select the algorithm for the
-collective in <code class="docutils literal notranslate"><span class="pre">&lt;coll_name&gt;</span></code>. For GPU buffers, the default algorithm is
-<code class="docutils literal notranslate"><span class="pre">topo</span></code>, which refers to the scale-up algorithm. If you select an algorithm
-different from <code class="docutils literal notranslate"><span class="pre">topo</span></code>, oneCCL will implement a non-hierarchical algorithm,
-where it will copy the GPU buffers to the Host (CPU) and will run the specified
-algorithm.</p>
-<p>For CPU buffers, <code class="docutils literal notranslate"><span class="pre">topo</span></code> is not available; you can only select one of the
-other algorithms in the table for a given collective.</p>
-<p>If the collective uses GPU buffers, you can select whether the implementation
-of the scale-up algorithm should use copy engines or kernels. There is also the
-option to select the scaleout algorithm using
-<code class="docutils literal notranslate"><span class="pre">CCL_&lt;coll_name&gt;_SCALEOUT=&lt;algo_name&gt;</span></code>.</p>
-<p>Next, environment variables for collective algorithm selection are explained
-based on the code path (Level Zero or SYCL), the collective being called, and
-the type of buffer (GPU or CPU).</p>
+support collectives with the GPU buffers; one directly uses Level Zero, and
+the other uses SYCL. The SYCL path is a new code being developed and support
+for new collectives and algorithms are expanding.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The documentation is being updated as more collectives and algorithms are supported.</p>
+</div>
+<p>For GPU buffers, oneCCL collectives are optimized to execute a hierarchical
+algorithm composed of an optimized scale-up phase (communication between
+ranks/processes in the same node) and a scaleout phase (communication between
+ranks/processes on different nodes). For CPU buffers, the current
+collective algorithms do not have support for scale-up and scaleout phases;
+only a non-hierarchical algorithm can be chosen.</p>
+<p>For the <em>Level Zero</em> path, use <code class="docutils literal notranslate"><span class="pre">CCL_&lt;coll_name&gt;&#8239;=&#8239;&lt;algo_name&gt;</span></code> to select the
+algorithm for the collective in <code class="docutils literal notranslate"><span class="pre">&lt;coll_name&gt;</span></code>. For GPU buffers, the default
+algorithm is <code class="docutils literal notranslate"><span class="pre">topo</span></code>, which refers to the scale-up algorithm. If you select
+an algorithm different from <code class="docutils literal notranslate"><span class="pre">topo</span></code>, oneCCL will implement a non-hierarchical
+algorithm, where it will copy the GPU buffers to the Host (CPU) and will run
+the specified algorithm. If the collective uses GPU buffers, you can select
+whether the implementation of the scale-up algorithm should use copy engines
+or kernels. Another alternative option is to select the scaleout algorithm using
+<code class="docutils literal notranslate"><span class="pre">CCL_&lt;coll_name&gt;_SCALEOUT=&lt;algo_name&gt;</span></code>. For CPU buffers, the collective
+selection is similar to that of the Level Zero path, but the <code class="docutils literal notranslate"><span class="pre">topo</span></code> algorithm
+is not available in that case.</p>
+<p>For the <em>SYCL</em> path, the implementation also uses a hierarchical algorithm.
+The implementation has two different scale-up algorithms depending on the
+message size (small or large). It is possible to change the threshold with
+<code class="docutils literal notranslate"><span class="pre">CCL_SYCL_&lt;coll_name&gt;_SMALL_THRESHOLD</span></code>, so that collectives with message
+sizes smaller than the specified threshold use an algorithm specialized
+for small-sized messages. For large messages, the implementation supports
+the usage of temporary buffers for communication across processes or writing
+directly to the user buffer on the other process. This can be selected
+with <code class="docutils literal notranslate"><span class="pre">CCL_SYCL_&lt;coll_name&gt;_TMP_BUF</span></code> variable.  The algorithm to use for
+scaleout can be specified with <code class="docutils literal notranslate"><span class="pre">CCL_SYCL_&lt;coll_name&gt;_SCALEOUT</span></code>. Notice that
+by default oneCCL will use a SYCL-based implementation. To fallback to a Level Zero-based
+implementation, use the <code class="docutils literal notranslate"><span class="pre">CCL_SYCL_&lt;coll_name&gt;_SCALEOUT_THRESHOLD</span></code> variable,
+in which case messages larger than this threshold will take the Level Zero path.</p>
+<p>In the next section, the environment variables for collective algorithm selection
+are explained based on the code path (Level Zero or SYCL), the collectives
+being called, and the type of buffer (GPU or CPU).</p>
 <section id="level-zero-path">
-<h3>Level Zero Path<a class="headerlink" href="#level-zero-path" title="Permalink to this headline">#</a></h3>
+<h3>Level Zero Path<a class="headerlink" href="#level-zero-path" title="Link to this heading">#</a></h3>
 <section id="allgather-allgatherv">
-<h4>ALLGATHER/ALLGATHERV<a class="headerlink" href="#allgather-allgatherv" title="Permalink to this headline">#</a></h4>
+<h4>ALLGATHER/ALLGATHERV<a class="headerlink" href="#allgather-allgatherv" title="Link to this heading">#</a></h4>
 <section id="ccl-allgather-ccl-allgatherv">
-<h5>CCL_ALLGATHER/CCL_ALLGATHERV<a class="headerlink" href="#ccl-allgather-ccl-allgatherv" title="Permalink to this headline">#</a></h5>
+<h5>CCL_ALLGATHER/CCL_ALLGATHERV<a class="headerlink" href="#ccl-allgather-ccl-allgatherv" title="Link to this heading">#</a></h5>
 <p><strong>Syntax</strong></p>
 <p>For the whole message size:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">CCL_ALLGATHER</span><span class="o">=&lt;</span><span class="n">algo_name</span><span class="o">&gt;</span>
@@ -614,10 +675,10 @@ specify the maximum message size, use the reserved word max.</p></li>
 </pre></div>
 </div>
 <p><strong>Arguments</strong></p>
-<table class="colwidths-given table table-left">
+<div class="pst-scrollable-table-container"><table class="table table-left">
 <colgroup>
-<col style="width: 33%" />
-<col style="width: 67%" />
+<col style="width: 33.3%" />
+<col style="width: 66.7%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>&lt;algo_name&gt;</p></th>
@@ -645,22 +706,23 @@ specify the maximum message size, use the reserved word max.</p></li>
 </tr>
 </tbody>
 </table>
+</div>
 <p><strong>Description</strong></p>
 <p>Use this environment variable to specify the algorithm for <code class="docutils literal notranslate"><span class="pre">ALLGATHER</span></code>/ <code class="docutils literal notranslate"><span class="pre">ALLGATERV</span></code>.</p>
 <p>If using GPU buffers, select <code class="docutils literal notranslate"><span class="pre">CCL_ALLGATHER=topo</span></code> or <code class="docutils literal notranslate"><span class="pre">CCL_ALLGATHERV=topo</span></code> (the default) to use a hierarchical algorithm for scale-up data transfer across GPUs in the same node.
 For GPU buffers, when selecting an algorithm different from <code class="docutils literal notranslate"><span class="pre">topo</span></code>, oneCCL copies the data to the host and follows the specified CPU algorithm.</p>
 </section>
 <section id="ccl-allgatherv-monolithic-pipeline-kernel">
-<h5>CCL_ALLGATHERV_MONOLITHIC_PIPELINE_KERNEL<a class="headerlink" href="#ccl-allgatherv-monolithic-pipeline-kernel" title="Permalink to this headline">#</a></h5>
+<h5>CCL_ALLGATHERV_MONOLITHIC_PIPELINE_KERNEL<a class="headerlink" href="#ccl-allgatherv-monolithic-pipeline-kernel" title="Link to this heading">#</a></h5>
 <p><strong>Syntax</strong></p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">CCL_ALLGATHERV_MONOLITHIC_PIPELINE_KERNEL</span><span class="o">=&lt;</span><span class="n">value</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <p><strong>Arguments</strong></p>
-<table class="colwidths-given table table-left">
+<div class="pst-scrollable-table-container"><table class="table table-left">
 <colgroup>
-<col style="width: 33%" />
-<col style="width: 67%" />
+<col style="width: 33.3%" />
+<col style="width: 66.7%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>&lt;value&gt;</p></th>
@@ -676,6 +738,7 @@ For GPU buffers, when selecting an algorithm different from <code class="docutil
 </tr>
 </tbody>
 </table>
+</div>
 <p><strong>Description</strong></p>
 <p>Set this environment variable to use GPU buffers to specify the scale-up phase of the algorithm for <code class="docutils literal notranslate"><span class="pre">ALLGATHER</span></code>/ <code class="docutils literal notranslate"><span class="pre">ALLGATHERV</span></code>.
 This environment variable allows the user to choose between using compute kernels or copy engines.</p>
@@ -686,7 +749,7 @@ This environment variable allows the user to choose between using compute kernel
 </div>
 </section>
 <section id="ccl-allgather-scaleout-ccl-allgatherv-scaleout">
-<h5>CCL_ALLGATHER_SCALEOUT/CCL_ALLGATHERV_SCALEOUT<a class="headerlink" href="#ccl-allgather-scaleout-ccl-allgatherv-scaleout" title="Permalink to this headline">#</a></h5>
+<h5>CCL_ALLGATHER_SCALEOUT/CCL_ALLGATHERV_SCALEOUT<a class="headerlink" href="#ccl-allgather-scaleout-ccl-allgatherv-scaleout" title="Link to this heading">#</a></h5>
 <p><strong>Syntax</strong></p>
 <p>For the whole message size:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">CCL_ALLGATHER_SCALEOUT</span><span class="o">=&lt;</span><span class="n">algo_name</span><span class="o">&gt;</span>
@@ -712,10 +775,10 @@ bytes. To specify the maximum message size, use the reserved word max.</p></li>
 </pre></div>
 </div>
 <p><strong>Arguments</strong></p>
-<table class="colwidths-given table table-left">
+<div class="pst-scrollable-table-container"><table class="table table-left">
 <colgroup>
-<col style="width: 33%" />
-<col style="width: 67%" />
+<col style="width: 33.3%" />
+<col style="width: 66.7%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>&lt;algo_name&gt;</p></th>
@@ -740,17 +803,51 @@ bytes. To specify the maximum message size, use the reserved word max.</p></li>
 </tr>
 </tbody>
 </table>
+</div>
 <p><strong>Description</strong></p>
 <p>Set this environment variable to use GPU buffers to specify the scaleout phase of the algorithm for <code class="docutils literal notranslate"><span class="pre">ALLGATHER</span></code> / <code class="docutils literal notranslate"><span class="pre">ALLGATHERV</span></code>.
 This option is only available if <code class="docutils literal notranslate"><span class="pre">CCL_ALLGATHERV</span> <span class="pre">=</span> <span class="pre">topo</span></code> or <code class="docutils literal notranslate"><span class="pre">CCL_ALLGATHER</span> <span class="pre">=</span> <span class="pre">topo</span></code> (the default for GPU buffers).</p>
 <p>oneCCL internally fills the algorithm selection table with appropriate defaults. Your input complements the selection table.</p>
 <p>To see the actual table values, set <code class="docutils literal notranslate"><span class="pre">CCL_LOG_LEVEL=info</span></code>.</p>
 </section>
+<section id="ccl-sycl-allgatherv-scaleout">
+<h5>CCL_SYCL_ALLGATHERV_SCALEOUT<a class="headerlink" href="#ccl-sycl-allgatherv-scaleout" title="Link to this heading">#</a></h5>
+<p><strong>Syntax</strong></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">CCL_SYCL_ALLGATHERV_SCALEOUT</span><span class="o">=&lt;</span><span class="n">value</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p><strong>Arguments</strong></p>
+<div class="pst-scrollable-table-container"><table class="table table-left">
+<colgroup>
+<col style="width: 33.3%" />
+<col style="width: 66.7%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>&lt;algo_name&gt;</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">auto</span></code></p></td>
+<td><p>Default value. For different message chunk sizes uses different algorithms.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">direct</span></code></p></td>
+<td><p>Explicitly uses a direct algorithm in scale-out phase.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">ring</span></code></p></td>
+<td><p>Explicitly uses a ring algorithm in scale-out phase.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Description</strong></p>
+<p>Use this environment variable to specify the algorithm for <code class="docutils literal notranslate"><span class="pre">ALLGATHER/ALLGATHERV</span></code>. Currently, the selected algorithm is used for all message sizes.</p>
+</section>
 </section>
 <section id="allreduce">
-<h4>ALLREDUCE<a class="headerlink" href="#allreduce" title="Permalink to this headline">#</a></h4>
+<h4>ALLREDUCE<a class="headerlink" href="#allreduce" title="Link to this heading">#</a></h4>
 <section id="ccl-allreduce">
-<h5>CCL_ALLREDUCE<a class="headerlink" href="#ccl-allreduce" title="Permalink to this headline">#</a></h5>
+<h5>CCL_ALLREDUCE<a class="headerlink" href="#ccl-allreduce" title="Link to this heading">#</a></h5>
 <p><strong>Syntax</strong></p>
 <p>For the whole message size:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">CCL_ALLREDUCE</span><span class="o">=&lt;</span><span class="n">algo_name</span><span class="o">&gt;</span>
@@ -772,10 +869,10 @@ specify the maximum message size, use the reserved word  <code class="docutils l
 </pre></div>
 </div>
 <p><strong>Arguments</strong></p>
-<table class="colwidths-given table table-left">
+<div class="pst-scrollable-table-container"><table class="table table-left">
 <colgroup>
-<col style="width: 33%" />
-<col style="width: 67%" />
+<col style="width: 33.3%" />
+<col style="width: 66.7%" />
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p>&lt;algo_name&gt;</p></td>
@@ -807,6 +904,7 @@ specify the maximum message size, use the reserved word  <code class="docutils l
 </tr>
 </tbody>
 </table>
+</div>
 <p><strong>Description</strong></p>
 <p>Use this environment variable to specify the algorithm for <code class="docutils literal notranslate"><span class="pre">ALLREDUCE</span></code>.</p>
 <p>If using GPU buffers, select <code class="docutils literal notranslate"><span class="pre">CCL_ALLREDUCE=topo</span></code> (the default) to use a hierarchical algorithm for scale-up data transfer across GPUs in the same node.
@@ -815,16 +913,16 @@ For GPU buffers, when selecting an algorithm different from <code class="docutil
 <p>To see the actual table values, set <code class="docutils literal notranslate"><span class="pre">CCL_LOG_LEVEL=info</span></code>.</p>
 </section>
 <section id="ccl-reduce-scatter-monolithic-pipeline-kernel-gpu-buffers-only">
-<h5>CCL_REDUCE_SCATTER_MONOLITHIC_PIPELINE_KERNEL (GPU buffers only)<a class="headerlink" href="#ccl-reduce-scatter-monolithic-pipeline-kernel-gpu-buffers-only" title="Permalink to this headline">#</a></h5>
+<h5>CCL_REDUCE_SCATTER_MONOLITHIC_PIPELINE_KERNEL (GPU buffers only)<a class="headerlink" href="#ccl-reduce-scatter-monolithic-pipeline-kernel-gpu-buffers-only" title="Link to this heading">#</a></h5>
 <p><strong>Syntax</strong></p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">CCL_REDUCE_SCATTER_MONOLITHIC_PIPELINE_KERNEL</span><span class="o">=&lt;</span><span class="n">value</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <p><strong>Arguments</strong></p>
-<table class="colwidths-given table table-left">
+<div class="pst-scrollable-table-container"><table class="table table-left">
 <colgroup>
-<col style="width: 33%" />
-<col style="width: 67%" />
+<col style="width: 33.3%" />
+<col style="width: 66.7%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>&lt;value&gt;</p></th>
@@ -840,22 +938,23 @@ For GPU buffers, when selecting an algorithm different from <code class="docutil
 </tr>
 </tbody>
 </table>
+</div>
 <p><strong>Description</strong></p>
 <p>Set this environment variable to use GPU buffers to specify how to perform the reduce_scatter portion of the scale-up <code class="docutils literal notranslate"><span class="pre">ALLREDUCE</span></code> collective.
 This variable allows you to choose between using compute kernels or copy engines.</p>
 <p>This option is only available if <code class="docutils literal notranslate"><span class="pre">CCL_ALLREDUCE=topo</span></code> (the default for GPU buffers).</p>
 </section>
 <section id="ccl-allgatherv-monolithic-pipeline-kernel-gpu-buffers-only">
-<h5>CCL_ALLGATHERV_MONOLITHIC_PIPELINE_KERNEL (GPU buffers only)<a class="headerlink" href="#ccl-allgatherv-monolithic-pipeline-kernel-gpu-buffers-only" title="Permalink to this headline">#</a></h5>
+<h5>CCL_ALLGATHERV_MONOLITHIC_PIPELINE_KERNEL (GPU buffers only)<a class="headerlink" href="#ccl-allgatherv-monolithic-pipeline-kernel-gpu-buffers-only" title="Link to this heading">#</a></h5>
 <p><strong>Syntax</strong></p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">CCL_ALLGATHERV_MONOLITHIC_PIPELINE_KERNEL</span><span class="o">=&lt;</span><span class="n">value</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <p><strong>Arguments</strong></p>
-<table class="colwidths-given table table-left">
+<div class="pst-scrollable-table-container"><table class="table table-left">
 <colgroup>
-<col style="width: 33%" />
-<col style="width: 67%" />
+<col style="width: 33.3%" />
+<col style="width: 66.7%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>&lt;value&gt;</p></th>
@@ -871,6 +970,7 @@ This variable allows you to choose between using compute kernels or copy engines
 </tr>
 </tbody>
 </table>
+</div>
 <p><strong>Description</strong></p>
 <p><code class="docutils literal notranslate"><span class="pre">ALLREDUCE</span></code> is implemented as a reduce-scatter phase followed by an allgather phase.</p>
 <p>Set this environment variable to use GPU buffers to specify how to perform the
@@ -880,7 +980,7 @@ engines. This option is only available if <code class="docutils literal notransl
 for GPU buffers).</p>
 </section>
 <section id="ccl-allreduce-scaleout-gpu-buffers-only">
-<h5>CCL_ALLREDUCE_SCALEOUT (GPU buffers only)<a class="headerlink" href="#ccl-allreduce-scaleout-gpu-buffers-only" title="Permalink to this headline">#</a></h5>
+<h5>CCL_ALLREDUCE_SCALEOUT (GPU buffers only)<a class="headerlink" href="#ccl-allreduce-scaleout-gpu-buffers-only" title="Link to this heading">#</a></h5>
 <p><strong>Syntax</strong></p>
 <p>For the whole message size:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">CCL_ALLREDUCE_SCALEOUT</span><span class="o">=&lt;</span><span class="n">algo_name</span><span class="o">&gt;</span>
@@ -901,10 +1001,10 @@ for GPU buffers).</p>
 </pre></div>
 </div>
 <p><strong>Arguments</strong></p>
-<table class="colwidths-given table table-left">
+<div class="pst-scrollable-table-container"><table class="table table-left">
 <colgroup>
-<col style="width: 33%" />
-<col style="width: 67%" />
+<col style="width: 33.3%" />
+<col style="width: 66.7%" />
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">direct</span></code></p></td>
@@ -927,6 +1027,7 @@ for GPU buffers).</p>
 </tr>
 </tbody>
 </table>
+</div>
 <p><strong>Description</strong></p>
 <p>Set this environment variable to use GPU buffers to specify the scaleout algorithm for ALLREDUCE.
 This option is only available if <code class="docutils literal notranslate"><span class="pre">CCL_ALLREDUCE</span> <span class="pre">=</span> <span class="pre">topo</span></code> (the default for GPU buffers).</p>
@@ -935,12 +1036,12 @@ This option is only available if <code class="docutils literal notranslate"><spa
 </section>
 </section>
 <section id="alltoall-alltoallv">
-<h4>ALLTOALL, ALLTOALLV<a class="headerlink" href="#alltoall-alltoallv" title="Permalink to this headline">#</a></h4>
+<h4>ALLTOALL, ALLTOALLV<a class="headerlink" href="#alltoall-alltoallv" title="Link to this heading">#</a></h4>
 <section id="ccl-alltoall-ccl-alltoallv">
-<h5>CCL_ALLTOALL, CCL_ALLTOALLV<a class="headerlink" href="#ccl-alltoall-ccl-alltoallv" title="Permalink to this headline">#</a></h5>
+<h5>CCL_ALLTOALL, CCL_ALLTOALLV<a class="headerlink" href="#ccl-alltoall-ccl-alltoallv" title="Link to this heading">#</a></h5>
 <p><strong>Syntax</strong></p>
 <p>For the whole message size:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">CCL_ALLTOALL</span><span class="o">=&lt;</span><span class="n">algo_name</span><span class="o">&gt;</span><span class="w">  </span><span class="n">or</span><span class="w"> </span><span class="n">CCL_ALLTOALLV</span><span class="o">=&lt;</span><span class="n">algo_name</span><span class="o">&gt;</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">CCL_ALLTOALL</span><span class="o">=&lt;</span><span class="n">algo_name</span><span class="o">&gt;</span><span class="w">  </span><span class="k">or</span><span class="w"> </span><span class="n">CCL_ALLTOALLV</span><span class="o">=&lt;</span><span class="n">algo_name</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <p>For a specific message size range:</p>
@@ -966,10 +1067,10 @@ This option is only available if <code class="docutils literal notranslate"><spa
 </pre></div>
 </div>
 <p><strong>Arguments</strong></p>
-<table class="colwidths-given table table-left">
+<div class="pst-scrollable-table-container"><table class="table table-left">
 <colgroup>
-<col style="width: 33%" />
-<col style="width: 67%" />
+<col style="width: 33.3%" />
+<col style="width: 66.7%" />
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">topo</span></code></p></td>
@@ -986,18 +1087,19 @@ This option is only available if <code class="docutils literal notranslate"><spa
 </tr>
 </tbody>
 </table>
+</div>
 </section>
 <section id="ccl-alltoallv-monolithic-kernel">
-<h5>CCL_ALLTOALLV_MONOLITHIC_KERNEL<a class="headerlink" href="#ccl-alltoallv-monolithic-kernel" title="Permalink to this headline">#</a></h5>
+<h5>CCL_ALLTOALLV_MONOLITHIC_KERNEL<a class="headerlink" href="#ccl-alltoallv-monolithic-kernel" title="Link to this heading">#</a></h5>
 <p><strong>Syntax</strong></p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">CCL_ALLTOALLV_MONOLITHIC_KERNEL</span><span class="o">=&lt;</span><span class="n">value</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <p><strong>Arguments</strong></p>
-<table class="colwidths-given table table-left">
+<div class="pst-scrollable-table-container"><table class="table table-left">
 <colgroup>
-<col style="width: 33%" />
-<col style="width: 67%" />
+<col style="width: 33.3%" />
+<col style="width: 66.7%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>&lt;value&gt;</p></th>
@@ -1013,16 +1115,17 @@ This option is only available if <code class="docutils literal notranslate"><spa
 </tr>
 </tbody>
 </table>
+</div>
 <p><strong>Description</strong></p>
 <p>Set this environment variable to use GPU buffers to specify the scale-up algorithm for <code class="docutils literal notranslate"><span class="pre">ALLTOALL</span></code> or <code class="docutils literal notranslate"><span class="pre">ALLTOALLV</span></code>
 This environment variable allows the user to choose between using compute kernels or using copy engines.</p>
 <p>This option is only available if <code class="docutils literal notranslate"><span class="pre">CCL_ALLTOALL=topo</span></code> or <code class="docutils literal notranslate"><span class="pre">CCL_ALLTOALLV=topo</span></code>. The default for GPU buffers.</p>
 </section>
 <section id="ccl-alltoall-scaleout-ccl-scaleout-alltoallv-scaleout">
-<h5>CCL_ALLTOALL_SCALEOUT, CCL_scaleout_ALLTOALLV_scaleout<a class="headerlink" href="#ccl-alltoall-scaleout-ccl-scaleout-alltoallv-scaleout" title="Permalink to this headline">#</a></h5>
+<h5>CCL_ALLTOALL_SCALEOUT, CCL_scaleout_ALLTOALLV_scaleout<a class="headerlink" href="#ccl-alltoall-scaleout-ccl-scaleout-alltoallv-scaleout" title="Link to this heading">#</a></h5>
 <p><strong>Syntax</strong></p>
 <p>For the whole message size:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">CCL_ALLTOALL_SCALEOUT</span><span class="o">=&lt;</span><span class="n">algo_name</span><span class="o">&gt;</span><span class="w">  </span><span class="n">or</span><span class="w"> </span><span class="n">CCL_ALLTOALLV_SCALEOUT</span><span class="o">=&lt;</span><span class="n">algo_name</span><span class="o">&gt;</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">CCL_ALLTOALL_SCALEOUT</span><span class="o">=&lt;</span><span class="n">algo_name</span><span class="o">&gt;</span><span class="w">  </span><span class="k">or</span><span class="w"> </span><span class="n">CCL_ALLTOALLV_SCALEOUT</span><span class="o">=&lt;</span><span class="n">algo_name</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <p>For a specific message size range:</p>
@@ -1048,10 +1151,10 @@ format <code class="docutils literal notranslate"><span class="pre">&lt;left&gt;
 </pre></div>
 </div>
 <p><strong>Arguments</strong></p>
-<table class="colwidths-given table table-left">
+<div class="pst-scrollable-table-container"><table class="table table-left">
 <colgroup>
-<col style="width: 33%" />
-<col style="width: 67%" />
+<col style="width: 33.3%" />
+<col style="width: 66.7%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>&lt;algo_name&gt;</p></th>
@@ -1067,6 +1170,7 @@ format <code class="docutils literal notranslate"><span class="pre">&lt;left&gt;
 </tr>
 </tbody>
 </table>
+</div>
 <p><strong>Description</strong></p>
 <p>Set this environment variable to use GPU buffers to specify the scaleout algorithm for <code class="docutils literal notranslate"><span class="pre">ALLTOALL</span></code> or <code class="docutils literal notranslate"><span class="pre">ALLTOALLV</span></code>.
 This option is only available if <code class="docutils literal notranslate"><span class="pre">CCL_ALLTOALL=topo</span></code> or <code class="docutils literal notranslate"><span class="pre">CCL_ALLTOALLV=topo</span></code> (the default for GPU buffers).</p>
@@ -1075,18 +1179,18 @@ This option is only available if <code class="docutils literal notranslate"><spa
 </section>
 </section>
 <section id="barrier">
-<h4>BARRIER<a class="headerlink" href="#barrier" title="Permalink to this headline">#</a></h4>
+<h4>BARRIER<a class="headerlink" href="#barrier" title="Link to this heading">#</a></h4>
 <section id="ccl-barrier">
-<h5>CCL_BARRIER<a class="headerlink" href="#ccl-barrier" title="Permalink to this headline">#</a></h5>
+<h5>CCL_BARRIER<a class="headerlink" href="#ccl-barrier" title="Link to this heading">#</a></h5>
 <p><strong>Syntax</strong></p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">CCL_BARRIER</span><span class="o">=&lt;</span><span class="n">algo_name</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <p><strong>Arguments</strong></p>
-<table class="colwidths-given table table-left">
+<div class="pst-scrollable-table-container"><table class="table table-left">
 <colgroup>
-<col style="width: 33%" />
-<col style="width: 67%" />
+<col style="width: 33.3%" />
+<col style="width: 66.7%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>&lt;algo_name&gt;</p></th>
@@ -1102,23 +1206,24 @@ This option is only available if <code class="docutils literal notranslate"><spa
 </tr>
 </tbody>
 </table>
+</div>
 <p><strong>Description</strong></p>
 <p>Use this environment variable to select the barrier algorithm.</p>
 </section>
 </section>
 <section id="broadcast">
-<h4>BROADCAST<a class="headerlink" href="#broadcast" title="Permalink to this headline">#</a></h4>
+<h4>BROADCAST<a class="headerlink" href="#broadcast" title="Link to this heading">#</a></h4>
 <section id="ccl-bcast">
-<h5>CCL_BCAST<a class="headerlink" href="#ccl-bcast" title="Permalink to this headline">#</a></h5>
+<h5>CCL_BCAST<a class="headerlink" href="#ccl-bcast" title="Link to this heading">#</a></h5>
 <p><strong>Syntax</strong></p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">CCL_BCAST</span><span class="o">=&lt;</span><span class="n">algo_name</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <p><strong>Arguments</strong></p>
-<table class="colwidths-given table table-left">
+<div class="pst-scrollable-table-container"><table class="table table-left">
 <colgroup>
-<col style="width: 33%" />
-<col style="width: 67%" />
+<col style="width: 33.3%" />
+<col style="width: 66.7%" />
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p>&lt;algo_name&gt;</p></td>
@@ -1141,6 +1246,7 @@ This option is only available if <code class="docutils literal notranslate"><spa
 </tr>
 </tbody>
 </table>
+</div>
 <p><strong>Description</strong></p>
 <p>Use this environment variable to select the algorithm used for broadcast.</p>
 <div class="admonition note">
@@ -1151,9 +1257,9 @@ environment variable. To change the algorithm for <code class="docutils literal 
 </section>
 </section>
 <section id="reduce">
-<h4>REDUCE<a class="headerlink" href="#reduce" title="Permalink to this headline">#</a></h4>
+<h4>REDUCE<a class="headerlink" href="#reduce" title="Link to this heading">#</a></h4>
 <section id="ccl-reduce">
-<h5>CCL_REDUCE<a class="headerlink" href="#ccl-reduce" title="Permalink to this headline">#</a></h5>
+<h5>CCL_REDUCE<a class="headerlink" href="#ccl-reduce" title="Link to this heading">#</a></h5>
 <p><strong>Syntax</strong></p>
 <p>For the whole message size:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">CCL_REDUCE</span><span class="o">=&lt;</span><span class="n">algo_name</span><span class="o">&gt;</span>
@@ -1174,10 +1280,10 @@ environment variable. To change the algorithm for <code class="docutils literal 
 </pre></div>
 </div>
 <p><strong>Arguments</strong></p>
-<table class="colwidths-given table table-left">
+<div class="pst-scrollable-table-container"><table class="table table-left">
 <colgroup>
-<col style="width: 33%" />
-<col style="width: 67%" />
+<col style="width: 33.3%" />
+<col style="width: 66.7%" />
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p>&lt;algo_name&gt;</p></td>
@@ -1200,6 +1306,7 @@ environment variable. To change the algorithm for <code class="docutils literal 
 </tr>
 </tbody>
 </table>
+</div>
 <p><strong>Description</strong></p>
 <p>Set this environment variable to specify the algorithm for <code class="docutils literal notranslate"><span class="pre">REDUCE</span></code>.</p>
 <p>If using GPU buffers, select <code class="docutils literal notranslate"><span class="pre">CCL_REDUCE=topo</span></code> (the default) to use a hierarchical algorithm for scale-up data transfer across GPUs in the same node.
@@ -1208,16 +1315,16 @@ For GPU buffers, when selecting an algorithm different from <code class="docutil
 <p>To see the actual table values, set <code class="docutils literal notranslate"><span class="pre">CCL_LOG_LEVEL=info</span></code>.</p>
 </section>
 <section id="id2">
-<h5>CCL_REDUCE_SCATTER_MONOLITHIC_PIPELINE_KERNEL (GPU buffers only)<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h5>
+<h5>CCL_REDUCE_SCATTER_MONOLITHIC_PIPELINE_KERNEL (GPU buffers only)<a class="headerlink" href="#id2" title="Link to this heading">#</a></h5>
 <p><strong>Syntax</strong></p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">CCL_REDUCE_SCATTER_MONOLITHIC_PIPELINE_KERNEL</span><span class="o">=&lt;</span><span class="n">value</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <p><strong>Arguments</strong></p>
-<table class="colwidths-given table table-left">
+<div class="pst-scrollable-table-container"><table class="table table-left">
 <colgroup>
-<col style="width: 33%" />
-<col style="width: 67%" />
+<col style="width: 33.3%" />
+<col style="width: 66.7%" />
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p>&lt;value&gt;</p></td>
@@ -1231,13 +1338,14 @@ For GPU buffers, when selecting an algorithm different from <code class="docutil
 </tr>
 </tbody>
 </table>
+</div>
 <p><strong>Description</strong></p>
 <p>Set this environment variable to use GPU buffers to specify the scale-up algorithm for <code class="docutils literal notranslate"><span class="pre">ALLREDUCE</span></code>.
 This environment variable allows the user to choose between using compute kernels or using copy engines.</p>
 <p>This option is only available if <code class="docutils literal notranslate"><span class="pre">CCL_REDUCE=topo</span></code> (the default for GPU buffers).</p>
 </section>
 <section id="ccl-reduce-scaleout-gpu-buffers-only">
-<h5>CCL_REDUCE_SCALEOUT (GPU buffers only)<a class="headerlink" href="#ccl-reduce-scaleout-gpu-buffers-only" title="Permalink to this headline">#</a></h5>
+<h5>CCL_REDUCE_SCALEOUT (GPU buffers only)<a class="headerlink" href="#ccl-reduce-scaleout-gpu-buffers-only" title="Link to this heading">#</a></h5>
 <p><strong>Syntax</strong></p>
 <p>For the whole message size:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">CCL_REDUCE_SCALEOUT</span><span class="o">=&lt;</span><span class="n">algo_name</span><span class="o">&gt;</span>
@@ -1258,10 +1366,10 @@ a format <code class="docutils literal notranslate"><span class="pre">&lt;left&g
 </pre></div>
 </div>
 <p><strong>Arguments</strong></p>
-<table class="colwidths-given table table-left">
+<div class="pst-scrollable-table-container"><table class="table table-left">
 <colgroup>
-<col style="width: 33%" />
-<col style="width: 67%" />
+<col style="width: 33.3%" />
+<col style="width: 66.7%" />
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p>&lt;algo_name&gt;</p></td>
@@ -1281,6 +1389,7 @@ a format <code class="docutils literal notranslate"><span class="pre">&lt;left&g
 </tr>
 </tbody>
 </table>
+</div>
 <p><strong>Description</strong></p>
 <p>Set this environment variable to use GPU buffers to specify the scaleout algorithm for <code class="docutils literal notranslate"><span class="pre">REDUCE</span></code>.
 This option is only available if <code class="docutils literal notranslate"><span class="pre">CCL_REDUCE=topo</span></code> (the default for GPU buffers).</p>
@@ -1289,9 +1398,9 @@ This option is only available if <code class="docutils literal notranslate"><spa
 </section>
 </section>
 <section id="reduce-scatter">
-<h4>REDUCE_SCATTER<a class="headerlink" href="#reduce-scatter" title="Permalink to this headline">#</a></h4>
+<h4>REDUCE SCATTER<a class="headerlink" href="#reduce-scatter" title="Link to this heading">#</a></h4>
 <section id="ccl-reduce-scatter">
-<h5>CCL_REDUCE_SCATTER<a class="headerlink" href="#ccl-reduce-scatter" title="Permalink to this headline">#</a></h5>
+<h5>CCL_REDUCE_SCATTER<a class="headerlink" href="#ccl-reduce-scatter" title="Link to this heading">#</a></h5>
 <p><strong>Syntax</strong></p>
 <p>For the whole message size:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">CCL_REDUCE_SCATTER</span><span class="o">=&lt;</span><span class="n">algo_name</span><span class="o">&gt;</span>
@@ -1312,10 +1421,10 @@ format <code class="docutils literal notranslate"><span class="pre">&lt;left&gt;
 </pre></div>
 </div>
 <p><strong>Arguments</strong></p>
-<table class="colwidths-given table table-left">
+<div class="pst-scrollable-table-container"><table class="table table-left">
 <colgroup>
-<col style="width: 33%" />
-<col style="width: 67%" />
+<col style="width: 33.3%" />
+<col style="width: 66.7%" />
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p>&lt;algo_name&gt;</p></td>
@@ -1335,6 +1444,7 @@ format <code class="docutils literal notranslate"><span class="pre">&lt;left&gt;
 </tr>
 </tbody>
 </table>
+</div>
 <p><strong>Description</strong></p>
 <p>Use this environment variable to specify the algorithm for reduce. If using GPU
 buffers, select <code class="docutils literal notranslate"><span class="pre">CCL_REDUCE_SCATTER=topo</span></code> (the default) to use a hierarchical
@@ -1345,16 +1455,16 @@ data to the host and follow the specified CPU algorithm.</p>
 <p>To see the actual table values, set <code class="docutils literal notranslate"><span class="pre">CCL_LOG_LEVEL=info</span></code>.</p>
 </section>
 <section id="id3">
-<h5>CCL_REDUCE_SCATTER_MONOLITHIC_PIPELINE_KERNEL (GPU buffers only)<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h5>
+<h5>CCL_REDUCE_SCATTER_MONOLITHIC_PIPELINE_KERNEL (GPU buffers only)<a class="headerlink" href="#id3" title="Link to this heading">#</a></h5>
 <p><strong>Syntax</strong></p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">CCL_REDUCE_SCATTER_MONOLITHIC_PIPELINE_KERNEL</span><span class="o">=&lt;</span><span class="n">value</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <p><strong>Arguments</strong></p>
-<table class="colwidths-given table table-left">
+<div class="pst-scrollable-table-container"><table class="table table-left">
 <colgroup>
-<col style="width: 33%" />
-<col style="width: 67%" />
+<col style="width: 33.3%" />
+<col style="width: 66.7%" />
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p>&lt;value&gt;</p></td>
@@ -1368,13 +1478,14 @@ data to the host and follow the specified CPU algorithm.</p>
 </tr>
 </tbody>
 </table>
+</div>
 <p><strong>Description</strong></p>
 <p>Set this environment variable to use GPU buffers to specify how to perform the reduce-scatter portion of the scale-up <code class="docutils literal notranslate"><span class="pre">REDUCE_SCATTER</span></code> collective.
 This environment variable allows the user to choose between using compute kernels or using copy engines.</p>
 <p>This option is only available if <code class="docutils literal notranslate"><span class="pre">CCL_REDUCE_SCATTER=topo</span></code>  (the default for GPU buffers).</p>
 </section>
 <section id="ccl-reduce-scatter-scaleout-gpu-buffers-only">
-<h5>CCL_REDUCE_SCATTER_SCALEOUT (GPU buffers only)<a class="headerlink" href="#ccl-reduce-scatter-scaleout-gpu-buffers-only" title="Permalink to this headline">#</a></h5>
+<h5>CCL_REDUCE_SCATTER_SCALEOUT (GPU buffers only)<a class="headerlink" href="#ccl-reduce-scatter-scaleout-gpu-buffers-only" title="Link to this heading">#</a></h5>
 <p><strong>Syntax</strong></p>
 <p>For the whole message size:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">CCL_REDUCE_SCATTER_SCALEOUT</span><span class="o">=&lt;</span><span class="n">algo_name</span><span class="o">&gt;</span>
@@ -1395,10 +1506,10 @@ format <code class="docutils literal notranslate"><span class="pre">&lt;left&gt;
 </pre></div>
 </div>
 <p><strong>Arguments</strong></p>
-<table class="colwidths-given table table-left">
+<div class="pst-scrollable-table-container"><table class="table table-left">
 <colgroup>
-<col style="width: 33%" />
-<col style="width: 67%" />
+<col style="width: 33.3%" />
+<col style="width: 66.7%" />
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p>&lt;algo_name&gt;</p></td>
@@ -1415,6 +1526,7 @@ format <code class="docutils literal notranslate"><span class="pre">&lt;left&gt;
 </tr>
 </tbody>
 </table>
+</div>
 <p><strong>Description</strong></p>
 <p>Set this environment variable to use GPU buffers to specify the scaleout algorithm for <code class="docutils literal notranslate"><span class="pre">ALLREDUCE</span></code>.
 This option is only available if <code class="docutils literal notranslate"><span class="pre">CCL_REDUCE_SCATTER</span> <span class="pre">=</span> <span class="pre">topo</span></code> (the default for GPU buffers).</p>
@@ -1424,24 +1536,24 @@ This option is only available if <code class="docutils literal notranslate"><spa
 </section>
 </section>
 <section id="sycl-path">
-<h3>SYCL PATH<a class="headerlink" href="#sycl-path" title="Permalink to this headline">#</a></h3>
+<h3>SYCL PATH<a class="headerlink" href="#sycl-path" title="Link to this heading">#</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Starting with 2021.14, <code class="docutils literal notranslate"><span class="pre">SYCL_PATH</span></code> is the default environment variable that must be used.</p>
 </div>
 <section id="all-collectives">
-<h4>All collectives<a class="headerlink" href="#all-collectives" title="Permalink to this headline">#</a></h4>
+<h4>All collectives<a class="headerlink" href="#all-collectives" title="Link to this heading">#</a></h4>
 <section id="ccl-enable-sycl-kernels">
-<h5>CCL_ENABLE_SYCL_KERNELS<a class="headerlink" href="#ccl-enable-sycl-kernels" title="Permalink to this headline">#</a></h5>
+<h5>CCL_ENABLE_SYCL_KERNELS<a class="headerlink" href="#ccl-enable-sycl-kernels" title="Link to this heading">#</a></h5>
 <p><strong>Syntax</strong></p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">CCL_ENABLE_SYCL_KERNELS</span><span class="o">=&lt;</span><span class="n">value</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <p><strong>Arguments</strong></p>
-<table class="colwidths-given table table-left">
+<div class="pst-scrollable-table-container"><table class="table table-left">
 <colgroup>
-<col style="width: 33%" />
-<col style="width: 67%" />
+<col style="width: 33.3%" />
+<col style="width: 66.7%" />
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p>&lt;value&gt;</p></td>
@@ -1455,15 +1567,19 @@ This option is only available if <code class="docutils literal notranslate"><spa
 </tr>
 </tbody>
 </table>
+</div>
 <p><strong>Description</strong></p>
-<p>Setting this environment variable to <code class="docutils literal notranslate"><span class="pre">1</span></code> enables SYCL kernel-based implementations for <code class="docutils literal notranslate"><span class="pre">ALLGATHER</span></code>, <code class="docutils literal notranslate"><span class="pre">ALLGATHERV</span></code>, <code class="docutils literal notranslate"><span class="pre">ALLREDUCE</span></code>, <code class="docutils literal notranslate"><span class="pre">REDUCE_SCATTER</span></code>, and <code class="docutils literal notranslate"><span class="pre">ALLTOALL</span></code>.</p>
+<p>Setting this environment variable to <code class="docutils literal notranslate"><span class="pre">1</span></code> enables SYCL kernel-based implementations for <code class="docutils literal notranslate"><span class="pre">ALLGATHER</span></code>, <code class="docutils literal notranslate"><span class="pre">ALLGATHERV</span></code>, <code class="docutils literal notranslate"><span class="pre">ALLREDUCE</span></code>, <code class="docutils literal notranslate"><span class="pre">BROADCAST</span></code>, <code class="docutils literal notranslate"><span class="pre">REDUCE_SCATTER</span></code>, and <code class="docutils literal notranslate"><span class="pre">ALLTOALL</span></code>.</p>
 <p>This optimization supports all message sizes and the following data types:</p>
 <ul class="simple">
-<li><p>int32</p></li>
-<li><p>fp32</p></li>
-<li><p>fp16</p></li>
-<li><p>bf16</p></li>
-<li><p>sum operations</p></li>
+<li><p>int8/uint8 (for now only for <cite>send/recv</cite>)</p></li>
+<li><p>int32/uint32</p></li>
+<li><p>int64/uint64</p></li>
+<li><p>float16</p></li>
+<li><p>bfloat16</p></li>
+<li><p>float32</p></li>
+<li><p>float64</p></li>
+<li><p>sum and average operations</p></li>
 </ul>
 <p>oneCCL falls back to other implementations when the support is unavailable with SYCL kernels, so that you can set up this environment variable safely.</p>
 <div class="admonition note">
@@ -1473,18 +1589,18 @@ This option is only available if <code class="docutils literal notranslate"><spa
 </section>
 </section>
 <section id="id4">
-<h4>ALLGATHER/ALLGATHERV<a class="headerlink" href="#id4" title="Permalink to this headline">#</a></h4>
+<h4>ALLGATHER/ALLGATHERV<a class="headerlink" href="#id4" title="Link to this heading">#</a></h4>
 <section id="ccl-sycl-allgatherv-tmp-buf">
-<h5>CCL_SYCL_ALLGATHERV_TMP_BUF<a class="headerlink" href="#ccl-sycl-allgatherv-tmp-buf" title="Permalink to this headline">#</a></h5>
+<h5>CCL_SYCL_ALLGATHERV_TMP_BUF<a class="headerlink" href="#ccl-sycl-allgatherv-tmp-buf" title="Link to this heading">#</a></h5>
 <p><strong>Syntax</strong></p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">CCL_SYCL_ALLGATHERV_TMP_BUF</span><span class="o">=&lt;</span><span class="n">value</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <p><strong>Arguments</strong></p>
-<table class="colwidths-given table table-left">
+<div class="pst-scrollable-table-container"><table class="table table-left">
 <colgroup>
-<col style="width: 33%" />
-<col style="width: 67%" />
+<col style="width: 33.3%" />
+<col style="width: 66.7%" />
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p>&lt;value&gt;</p></td>
@@ -1498,20 +1614,21 @@ This option is only available if <code class="docutils literal notranslate"><spa
 </tr>
 </tbody>
 </table>
+</div>
 <p><strong>Description</strong></p>
 <p>Specifies if the <code class="docutils literal notranslate"><span class="pre">ALLGATHER</span></code>/ <code class="docutils literal notranslate"><span class="pre">ALLGATHERV</span></code> implementation should use a persistent temporary buffer or not. The implementation with temporary buffers makes the collective fully asynchronous, but adds some additional overhead due to the extra copy of the user buffer to a (persistent) temporary buffer. The current default uses Level Zero IPC to avoid the copies to the temporary buffer.</p>
 </section>
 <section id="ccl-sycl-allgatherv-small-threshold">
-<h5>CCL_SYCL_ALLGATHERV_SMALL_THRESHOLD<a class="headerlink" href="#ccl-sycl-allgatherv-small-threshold" title="Permalink to this headline">#</a></h5>
+<h5>CCL_SYCL_ALLGATHERV_SMALL_THRESHOLD<a class="headerlink" href="#ccl-sycl-allgatherv-small-threshold" title="Link to this heading">#</a></h5>
 <p><strong>Syntax</strong></p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">CCL_SYCL_ALLGATHERV_SMALL_THRESHOLD</span><span class="o">=&lt;</span><span class="n">value</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <p><strong>Arguments</strong></p>
-<table class="colwidths-given table table-left">
+<div class="pst-scrollable-table-container"><table class="table table-left">
 <colgroup>
-<col style="width: 33%" />
-<col style="width: 67%" />
+<col style="width: 33.3%" />
+<col style="width: 66.7%" />
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p>&lt;value&gt;</p></td>
@@ -1522,20 +1639,21 @@ This option is only available if <code class="docutils literal notranslate"><spa
 </tr>
 </tbody>
 </table>
+</div>
 <p><strong>Description</strong></p>
 <p><code class="docutils literal notranslate"><span class="pre">ALLGATHER</span></code>/ <code class="docutils literal notranslate"><span class="pre">ALLGATHERV</span></code> collectives with message sizes smaller than the specified threshold will use an algorithm specialized for small-sized messages.</p>
 </section>
 <section id="ccl-sycl-allgatherv-scaleout-threshold">
-<h5>CCL_SYCL_ALLGATHERV_SCALEOUT_THRESHOLD<a class="headerlink" href="#ccl-sycl-allgatherv-scaleout-threshold" title="Permalink to this headline">#</a></h5>
+<h5>CCL_SYCL_ALLGATHERV_SCALEOUT_THRESHOLD<a class="headerlink" href="#ccl-sycl-allgatherv-scaleout-threshold" title="Link to this heading">#</a></h5>
 <p><strong>Syntax</strong></p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">CCL_SYCL_ALLGATHERV_SCALEOUT_THRESHOLD</span><span class="o">=&lt;</span><span class="n">value</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <p><strong>Arguments</strong></p>
-<table class="colwidths-given table table-left">
+<div class="pst-scrollable-table-container"><table class="table table-left">
 <colgroup>
-<col style="width: 33%" />
-<col style="width: 67%" />
+<col style="width: 33.3%" />
+<col style="width: 66.7%" />
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p>&lt;value&gt;</p></td>
@@ -1546,23 +1664,24 @@ This option is only available if <code class="docutils literal notranslate"><spa
 </tr>
 </tbody>
 </table>
+</div>
 <p><strong>Description</strong></p>
 <p>For <code class="docutils literal notranslate"><span class="pre">ALLGATHER</span></code>/ <code class="docutils literal notranslate"><span class="pre">ALLGATHERV</span></code> collectives, when <code class="docutils literal notranslate"><span class="pre">send_count</span> <span class="pre">*</span> <span class="pre">#nodes</span></code> is below this threshold in bytes, the SYCL path is chosen to execute the collective operation. For message sizes exceeding this threshold, the implementation will switch to the Level Zero Path.</p>
 </section>
 </section>
 <section id="id5">
-<h4>ALLREDUCE<a class="headerlink" href="#id5" title="Permalink to this headline">#</a></h4>
+<h4>ALLREDUCE<a class="headerlink" href="#id5" title="Link to this heading">#</a></h4>
 <section id="ccl-sycl-allreduce-tmp-buf">
-<h5>CCL_SYCL_ALLREDUCE_TMP_BUF<a class="headerlink" href="#ccl-sycl-allreduce-tmp-buf" title="Permalink to this headline">#</a></h5>
+<h5>CCL_SYCL_ALLREDUCE_TMP_BUF<a class="headerlink" href="#ccl-sycl-allreduce-tmp-buf" title="Link to this heading">#</a></h5>
 <p><strong>Syntax</strong></p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">CCL_SYCL_ALLREDUCE_TMP_BUF</span><span class="o">=&lt;</span><span class="n">value</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <p><strong>Arguments</strong></p>
-<table class="colwidths-given table table-left">
+<div class="pst-scrollable-table-container"><table class="table table-left">
 <colgroup>
-<col style="width: 33%" />
-<col style="width: 67%" />
+<col style="width: 33.3%" />
+<col style="width: 66.7%" />
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p>&lt;value&gt;</p></td>
@@ -1576,20 +1695,21 @@ This option is only available if <code class="docutils literal notranslate"><spa
 </tr>
 </tbody>
 </table>
+</div>
 <p><strong>Description</strong></p>
 <p>Specifies whether the <code class="docutils literal notranslate"><span class="pre">ALLREDUCE</span></code> implementation should use a persistent temporary buffer. The implementation with temporary buffers makes the collective fully asynchronous, but adds some additional overhead due to the extra copy of the user buffer to a (persistent) temporary buffer. The current default uses Level Zero IPC support to avoid the copies to the temporary buffer.</p>
 </section>
 <section id="ccl-sycl-allreduce-small-threshold">
-<h5>CCL_SYCL_ALLREDUCE_SMALL_THRESHOLD<a class="headerlink" href="#ccl-sycl-allreduce-small-threshold" title="Permalink to this headline">#</a></h5>
+<h5>CCL_SYCL_ALLREDUCE_SMALL_THRESHOLD<a class="headerlink" href="#ccl-sycl-allreduce-small-threshold" title="Link to this heading">#</a></h5>
 <p><strong>Syntax</strong></p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">CCL_ALLREDUCE_SMALL_THRESHOLD</span><span class="o">=&lt;</span><span class="n">value</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <p><strong>Arguments</strong></p>
-<table class="colwidths-given table table-left">
+<div class="pst-scrollable-table-container"><table class="table table-left">
 <colgroup>
-<col style="width: 33%" />
-<col style="width: 67%" />
+<col style="width: 33.3%" />
+<col style="width: 66.7%" />
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p>&lt;value&gt;</p></td>
@@ -1600,20 +1720,21 @@ This option is only available if <code class="docutils literal notranslate"><spa
 </tr>
 </tbody>
 </table>
+</div>
 <p><strong>Description</strong></p>
 <p><code class="docutils literal notranslate"><span class="pre">ALLREDUCE</span></code> collective with message sizes smaller than the specified threshold will use an algorithm specialized for small-sized messages.</p>
 </section>
 <section id="ccl-sycl-allreduce-scaleout-threshold">
-<h5>CCL_SYCL_ALLREDUCE_SCALEOUT_THRESHOLD<a class="headerlink" href="#ccl-sycl-allreduce-scaleout-threshold" title="Permalink to this headline">#</a></h5>
+<h5>CCL_SYCL_ALLREDUCE_SCALEOUT_THRESHOLD<a class="headerlink" href="#ccl-sycl-allreduce-scaleout-threshold" title="Link to this heading">#</a></h5>
 <p><strong>Syntax</strong></p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">CCL_SYCL_ALLREDUCE_SCALEOUT_THRESHOLD</span><span class="o">=&lt;</span><span class="n">value</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <p><strong>Arguments</strong></p>
-<table class="colwidths-given table table-left">
+<div class="pst-scrollable-table-container"><table class="table table-left">
 <colgroup>
-<col style="width: 33%" />
-<col style="width: 67%" />
+<col style="width: 33.3%" />
+<col style="width: 66.7%" />
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p>&lt;value&gt;</p></td>
@@ -1624,11 +1745,12 @@ This option is only available if <code class="docutils literal notranslate"><spa
 </tr>
 </tbody>
 </table>
+</div>
 <p><strong>Description</strong></p>
 <p>For <code class="docutils literal notranslate"><span class="pre">ALLREDUCE</span></code> collectives, with message sizes below this threshold in bytes, the SYCL path is chosen to execute the collective operation. For message sizes exceeding this threshold, the implementation will switch to the Level Zero Path.</p>
 </section>
 <section id="ccl-sycl-allreduce-scaleout-direct-threshold">
-<h5>CCL_SYCL_ALLREDUCE_SCALEOUT_DIRECT_THRESHOLD<a class="headerlink" href="#ccl-sycl-allreduce-scaleout-direct-threshold" title="Permalink to this headline">#</a></h5>
+<h5>CCL_SYCL_ALLREDUCE_SCALEOUT_DIRECT_THRESHOLD<a class="headerlink" href="#ccl-sycl-allreduce-scaleout-direct-threshold" title="Link to this heading">#</a></h5>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">CCL_SYCL_ALLREDUCE_SCALEOUT_DIRECT_THRESHOLD</span></code> environment variable is available _only_ in 2021.14. Starting with 2021.15 and later, the variable is deprecated.</p>
@@ -1638,10 +1760,10 @@ This option is only available if <code class="docutils literal notranslate"><spa
 </pre></div>
 </div>
 <p><strong>Arguments</strong></p>
-<table class="colwidths-given table table-left">
+<div class="pst-scrollable-table-container"><table class="table table-left">
 <colgroup>
-<col style="width: 33%" />
-<col style="width: 67%" />
+<col style="width: 33.3%" />
+<col style="width: 66.7%" />
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p>&lt;value&gt;</p></td>
@@ -1652,20 +1774,21 @@ This option is only available if <code class="docutils literal notranslate"><spa
 </tr>
 </tbody>
 </table>
+</div>
 <p><strong>Description</strong></p>
 <p>For allreduce collectives with message sizes below this threshold in bytes, <code class="docutils literal notranslate"><span class="pre">MPI_Iallreduce</span></code> direct algorithm is selected as scale-out phase of the colllective. For message sizes above this threshold and under the <code class="docutils literal notranslate"><span class="pre">CCL_SYCL_ALLREDUCE_SCALEOUT_THRESHOLD</span></code>, the default algorithm (ring) is selected.</p>
 </section>
 <section id="ccl-sycl-allreduce-scaleout">
-<h5>CCL_SYCL_ALLREDUCE_SCALEOUT<a class="headerlink" href="#ccl-sycl-allreduce-scaleout" title="Permalink to this headline">#</a></h5>
+<h5>CCL_SYCL_ALLREDUCE_SCALEOUT<a class="headerlink" href="#ccl-sycl-allreduce-scaleout" title="Link to this heading">#</a></h5>
 <p><strong>Syntax</strong></p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">CCL_SYCL_ALLREDUCE_SCALEOUT</span><span class="o">=&lt;</span><span class="n">value</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <p><strong>Arguments</strong></p>
-<table class="colwidths-given table table-left">
+<div class="pst-scrollable-table-container"><table class="table table-left">
 <colgroup>
-<col style="width: 33%" />
-<col style="width: 67%" />
+<col style="width: 33.3%" />
+<col style="width: 66.7%" />
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p>&lt;value&gt;</p></td>
@@ -1680,28 +1803,110 @@ This option is only available if <code class="docutils literal notranslate"><spa
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">rabenseifner</span></code></p></td>
 <td><p>Selects the Rabenseifner algorithm</p></td>
 </tr>
-<tr class="row-odd"><td><p><a href="#id6"><span class="problematic" id="id7">``</span></a>ring ``</p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">ring</span></code></p></td>
 <td><p>Ring implementation based on ring <code class="docutils literal notranslate"><span class="pre">REDUCE_SCATTER</span></code> followed by ring <code class="docutils literal notranslate"><span class="pre">ALLGATHER</span></code>.</p></td>
 </tr>
 </tbody>
 </table>
+</div>
 <p><strong>Description</strong></p>
 <p>Use this environment variable to specify the algorithm for <code class="docutils literal notranslate"><span class="pre">ALLREDUCE</span></code>. Currently, the selected algorithm is used for all message sizes.</p>
 </section>
 </section>
-<section id="id8">
-<h4>REDUCE_SCATTER<a class="headerlink" href="#id8" title="Permalink to this headline">#</a></h4>
+<section id="id6">
+<h4>BROADCAST<a class="headerlink" href="#id6" title="Link to this heading">#</a></h4>
+<section id="ccl-sycl-broadcast-tmp-buf">
+<h5>CCL_SYCL_BROADCAST_TMP_BUF<a class="headerlink" href="#ccl-sycl-broadcast-tmp-buf" title="Link to this heading">#</a></h5>
+<p><strong>Syntax</strong></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">CCL_SYCL_BROADCAST_TMP_BUF</span><span class="o">=&lt;</span><span class="n">value</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p><strong>Arguments</strong></p>
+<div class="pst-scrollable-table-container"><table class="table table-left">
+<colgroup>
+<col style="width: 33.3%" />
+<col style="width: 66.7%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>&lt;value&gt;</p></td>
+<td><p>Description</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">1</span></code></p></td>
+<td><p>Uses a persistent temporary buffer to perform the <cite>BROADCAST</cite> operation.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">0</span></code></p></td>
+<td><p>Performs an IPC handle exchange, avoiding copies to temporary buffers. Default value.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Description</strong></p>
+<p>Specifies if the <code class="docutils literal notranslate"><span class="pre">BROADCAST</span></code> implementation should use a persistent temporary buffer or not. The implementation with temporary buffers makes the collective fully asynchronous, but adds some additional overhead due to the extra copy of the user buffer to a (persistent) temporary buffer. The current default uses Level Zero IPC support to avoid the copies to the temporary buffer.</p>
+</section>
+<section id="ccl-sycl-broadcast-small-threshold">
+<h5>CCL_SYCL_BROADCAST_SMALL_THRESHOLD<a class="headerlink" href="#ccl-sycl-broadcast-small-threshold" title="Link to this heading">#</a></h5>
+<p><strong>Syntax</strong></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">CCL_SYCL_BROADCAST_SMALL_THRESHOLD</span><span class="o">=&lt;</span><span class="n">value</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p><strong>Arguments</strong></p>
+<div class="pst-scrollable-table-container"><table class="table table-left">
+<colgroup>
+<col style="width: 33.3%" />
+<col style="width: 66.7%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>&lt;value&gt;</p></td>
+<td><p>Description</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&gt;=0</span></code></p></td>
+<td><p>Threshold in bytes to specify the small-size algorithm. Default value is <cite>524288</cite>.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Description</strong></p>
+<p><cite>BROADCAST</cite> collectives with message sizes smaller than the specified threshold will use an algorithm specialized for small-sized messages.</p>
+</section>
+<section id="ccl-sycl-broadcast-scaleout-threshold">
+<h5>CCL_SYCL_BROADCAST_SCALEOUT_THRESHOLD<a class="headerlink" href="#ccl-sycl-broadcast-scaleout-threshold" title="Link to this heading">#</a></h5>
+<p><strong>Syntax</strong></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">CCL_SYCL_BROADCAST_SCALEOUT_THRESHOLD</span><span class="o">=&lt;</span><span class="n">value</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p><strong>Arguments</strong></p>
+<div class="pst-scrollable-table-container"><table class="table table-left">
+<colgroup>
+<col style="width: 33.3%" />
+<col style="width: 66.7%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>&lt;value&gt;</p></td>
+<td><p>Description</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&gt;=0</span></code></p></td>
+<td><p>Threshold in bytes to specify when scale-out broadcast uses SYCL kernel-based implementation. Default value is <cite>4294967296</cite> (<cite>4GiB</cite> in bytes).</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Description</strong></p>
+<p>For <cite>BROADCAST</cite> collectives, with message sizes below this threshold in bytes, the SYCL path is chosen to execute the collective operation. For message sizes exceeding this threshold, the implementation will switch to the Level Zero Path.</p>
+</section>
+</section>
+<section id="id7">
+<h4>REDUCE SCATTER<a class="headerlink" href="#id7" title="Link to this heading">#</a></h4>
 <section id="ccl-sycl-reduce-scatter-tmp-buf">
-<h5>CCL_SYCL_REDUCE_SCATTER_TMP_BUF<a class="headerlink" href="#ccl-sycl-reduce-scatter-tmp-buf" title="Permalink to this headline">#</a></h5>
+<h5>CCL_SYCL_REDUCE_SCATTER_TMP_BUF<a class="headerlink" href="#ccl-sycl-reduce-scatter-tmp-buf" title="Link to this heading">#</a></h5>
 <p><strong>Syntax</strong></p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">CCL_SYCL_REDUCE_SCATTER_TMP_BUF</span><span class="o">=&lt;</span><span class="n">value</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <p><strong>Arguments</strong></p>
-<table class="colwidths-given table table-left">
+<div class="pst-scrollable-table-container"><table class="table table-left">
 <colgroup>
-<col style="width: 33%" />
-<col style="width: 67%" />
+<col style="width: 33.3%" />
+<col style="width: 66.7%" />
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p>&lt;value&gt;</p></td>
@@ -1715,20 +1920,21 @@ This option is only available if <code class="docutils literal notranslate"><spa
 </tr>
 </tbody>
 </table>
+</div>
 <p><strong>Description</strong></p>
 <p>Specifies if the <code class="docutils literal notranslate"><span class="pre">REDUCE_SCATTER</span></code> implementation should use a persistent temporary buffer or not. The implementation with temporary buffers makes the collective fully asynchronous, but adds some additional overhead due to the extra copy of the user buffer to a (persistent) temporary buffer. The current default uses Level Zero IPC support to avoid the copies to the temporary buffer.</p>
 </section>
 <section id="ccl-sycl-reduce-scatter-small-threshold">
-<h5>CCL_SYCL_REDUCE_SCATTER_SMALL_THRESHOLD<a class="headerlink" href="#ccl-sycl-reduce-scatter-small-threshold" title="Permalink to this headline">#</a></h5>
+<h5>CCL_SYCL_REDUCE_SCATTER_SMALL_THRESHOLD<a class="headerlink" href="#ccl-sycl-reduce-scatter-small-threshold" title="Link to this heading">#</a></h5>
 <p><strong>Syntax</strong></p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">CCL_SYCL_REDUCE_SCATTER_SMALL_THRESHOLD</span><span class="o">=&lt;</span><span class="n">value</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <p><strong>Arguments</strong></p>
-<table class="colwidths-given table table-left">
+<div class="pst-scrollable-table-container"><table class="table table-left">
 <colgroup>
-<col style="width: 33%" />
-<col style="width: 67%" />
+<col style="width: 33.3%" />
+<col style="width: 66.7%" />
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p>&lt;value&gt;</p></td>
@@ -1739,11 +1945,12 @@ This option is only available if <code class="docutils literal notranslate"><spa
 </tr>
 </tbody>
 </table>
+</div>
 <p><strong>Description</strong></p>
 <p><code class="docutils literal notranslate"><span class="pre">REDUCE_SCATTER</span></code> collectives with message sizes smaller than the specified threshold will use an algorithm specialized for small-sized messages.</p>
 </section>
 <section id="ccl-sycl-reduce-scatter-scaleout-direct-threshold">
-<h5>CCL_SYCL_REDUCE_SCATTER_SCALEOUT_DIRECT_THRESHOLD<a class="headerlink" href="#ccl-sycl-reduce-scatter-scaleout-direct-threshold" title="Permalink to this headline">#</a></h5>
+<h5>CCL_SYCL_REDUCE_SCATTER_SCALEOUT_DIRECT_THRESHOLD<a class="headerlink" href="#ccl-sycl-reduce-scatter-scaleout-direct-threshold" title="Link to this heading">#</a></h5>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">CCL_SYCL_REDUCE_SCATTER_SCALEOUT_DIRECT_THRESHOLD</span></code> environment variable is available _only_ in 2021.14. Starting with 2021.15 and later, this variable is deprecated.</p>
@@ -1753,10 +1960,10 @@ This option is only available if <code class="docutils literal notranslate"><spa
 </pre></div>
 </div>
 <p><strong>Arguments</strong></p>
-<table class="colwidths-given table table-left">
+<div class="pst-scrollable-table-container"><table class="table table-left">
 <colgroup>
-<col style="width: 33%" />
-<col style="width: 67%" />
+<col style="width: 33.3%" />
+<col style="width: 66.7%" />
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p>&lt;value&gt;</p></td>
@@ -1767,20 +1974,21 @@ This option is only available if <code class="docutils literal notranslate"><spa
 </tr>
 </tbody>
 </table>
+</div>
 <p><strong>Description</strong></p>
 <p>For reduce-scatter collectives with message sizes below this threshold in bytes, <code class="docutils literal notranslate"><span class="pre">MPI_Ireduce_scatter</span></code> direct algorithm is selected for the scale-out phase of the collective. For message sizes above this threshold and under the <code class="docutils literal notranslate"><span class="pre">CCL_SYCL_REDUCE_SCATTER_SCALEOUT_THRESHOLD</span></code>, the default algorithm (ring) is selected.</p>
 </section>
 <section id="ccl-sycl-reduce-scatter-scaleout">
-<h5>CCL_SYCL_REDUCE_SCATTER_SCALEOUT<a class="headerlink" href="#ccl-sycl-reduce-scatter-scaleout" title="Permalink to this headline">#</a></h5>
+<h5>CCL_SYCL_REDUCE_SCATTER_SCALEOUT<a class="headerlink" href="#ccl-sycl-reduce-scatter-scaleout" title="Link to this heading">#</a></h5>
 <p><strong>Syntax</strong></p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">CCL_SYCL_REDUCE_SCATTER_SCALEOUT</span><span class="o">=&lt;</span><span class="n">value</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <p><strong>Arguments</strong></p>
-<table class="colwidths-given table table-left">
+<div class="pst-scrollable-table-container"><table class="table table-left">
 <colgroup>
-<col style="width: 33%" />
-<col style="width: 67%" />
+<col style="width: 33.3%" />
+<col style="width: 66.7%" />
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p>&lt;value&gt;</p></td>
@@ -1797,20 +2005,21 @@ This option is only available if <code class="docutils literal notranslate"><spa
 </tr>
 </tbody>
 </table>
+</div>
 <p><strong>Description</strong></p>
 <p>Use this environment variable to specify the algorithm for <code class="docutils literal notranslate"><span class="pre">REDUCE_SCATTER</span></code>. Currently, the selected algorithm is used for all message sizes.</p>
 </section>
 <section id="ccl-sycl-reduce-scatter-scaleout-threshold">
-<h5>CCL_SYCL_REDUCE_SCATTER_SCALEOUT_THRESHOLD<a class="headerlink" href="#ccl-sycl-reduce-scatter-scaleout-threshold" title="Permalink to this headline">#</a></h5>
+<h5>CCL_SYCL_REDUCE_SCATTER_SCALEOUT_THRESHOLD<a class="headerlink" href="#ccl-sycl-reduce-scatter-scaleout-threshold" title="Link to this heading">#</a></h5>
 <p><strong>Syntax</strong></p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">CCL_SYCL_REDUCE_SCATTER_SCALEOUT_THRESHOLD</span><span class="o">=&lt;</span><span class="n">value</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <p><strong>Arguments</strong></p>
-<table class="colwidths-given table table-left">
+<div class="pst-scrollable-table-container"><table class="table table-left">
 <colgroup>
-<col style="width: 33%" />
-<col style="width: 67%" />
+<col style="width: 33.3%" />
+<col style="width: 66.7%" />
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p>&lt;value&gt;</p></td>
@@ -1821,6 +2030,7 @@ This option is only available if <code class="docutils literal notranslate"><spa
 </tr>
 </tbody>
 </table>
+</div>
 <p><strong>Description</strong></p>
 <p>For <code class="docutils literal notranslate"><span class="pre">REDUCE_SCATTER</span></code> collectives with message sizes below this threshold in bytes, the SYCL path is chosen to execute the collective operation. For message sizes exceeding this threshold, the implementation will switch to the Level Zero Path.</p>
 </section>
@@ -1828,19 +2038,19 @@ This option is only available if <code class="docutils literal notranslate"><spa
 </section>
 </section>
 <section id="workers">
-<h2>Workers<a class="headerlink" href="#workers" title="Permalink to this headline">#</a></h2>
+<h2>Workers<a class="headerlink" href="#workers" title="Link to this heading">#</a></h2>
 <p>The group of environment variables to control worker threads.</p>
 <section id="ccl-worker-count">
-<span id="id9"></span><h3>CCL_WORKER_COUNT<a class="headerlink" href="#ccl-worker-count" title="Permalink to this headline">#</a></h3>
+<span id="id8"></span><h3>CCL_WORKER_COUNT<a class="headerlink" href="#ccl-worker-count" title="Link to this heading">#</a></h3>
 <p><strong>Syntax</strong></p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">CCL_WORKER_COUNT</span><span class="o">=&lt;</span><span class="n">value</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <p><strong>Arguments</strong></p>
-<table class="colwidths-given table table-left">
+<div class="pst-scrollable-table-container"><table class="table table-left">
 <colgroup>
-<col style="width: 33%" />
-<col style="width: 67%" />
+<col style="width: 33.3%" />
+<col style="width: 66.7%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>&lt;value&gt;</p></th>
@@ -1853,20 +2063,21 @@ This option is only available if <code class="docutils literal notranslate"><spa
 </tr>
 </tbody>
 </table>
+</div>
 <p><strong>Description</strong></p>
 <p>Set this environment variable to specify the number of oneCCL worker threads. For GPU buffers, currently we do not recommend setting this variable to values larger than <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p>
 </section>
 <section id="ccl-worker-affinity">
-<span id="id10"></span><h3>CCL_WORKER_AFFINITY<a class="headerlink" href="#ccl-worker-affinity" title="Permalink to this headline">#</a></h3>
+<span id="id9"></span><h3>CCL_WORKER_AFFINITY<a class="headerlink" href="#ccl-worker-affinity" title="Link to this heading">#</a></h3>
 <p><strong>Syntax</strong></p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">CCL_WORKER_AFFINITY</span><span class="o">=&lt;</span><span class="n">cpulist</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <p><strong>Arguments</strong></p>
-<table class="colwidths-given table table-left">
+<div class="pst-scrollable-table-container"><table class="table table-left">
 <colgroup>
-<col style="width: 33%" />
-<col style="width: 67%" />
+<col style="width: 33.3%" />
+<col style="width: 66.7%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>&lt;cpulist&gt;</p></th>
@@ -1889,20 +2100,21 @@ The core number should not exceed the number of cores available on the system. T
 </tr>
 </tbody>
 </table>
+</div>
 <p><strong>Description</strong></p>
 <p>Set this environment variable to specify cpu affinity for oneCCL worker threads.</p>
 </section>
 <section id="ccl-worker-mem-affinity">
-<h3>CCL_WORKER_MEM_AFFINITY<a class="headerlink" href="#ccl-worker-mem-affinity" title="Permalink to this headline">#</a></h3>
+<h3>CCL_WORKER_MEM_AFFINITY<a class="headerlink" href="#ccl-worker-mem-affinity" title="Link to this heading">#</a></h3>
 <p><strong>Syntax</strong></p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">CCL_WORKER_MEM_AFFINITY</span><span class="o">=&lt;</span><span class="n">nodelist</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <p><strong>Arguments</strong></p>
-<table class="colwidths-given table table-left">
+<div class="pst-scrollable-table-container"><table class="table table-left">
 <colgroup>
-<col style="width: 33%" />
-<col style="width: 67%" />
+<col style="width: 33.3%" />
+<col style="width: 66.7%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>&lt;nodelist&gt;</p></th>
@@ -1920,23 +2132,24 @@ The number should not exceed the number of NUMA nodes available on the system.</
 </tr>
 </tbody>
 </table>
+</div>
 <p><strong>Description</strong></p>
 <p>Set this environment variable to specify memory affinity for oneCCL worker threads.</p>
 </section>
 </section>
 <section id="kvs">
-<h2>KVS<a class="headerlink" href="#kvs" title="Permalink to this headline">#</a></h2>
+<h2>KVS<a class="headerlink" href="#kvs" title="Link to this heading">#</a></h2>
 <section id="ccl-kvs-mode">
-<h3>CCL_KVS_MODE<a class="headerlink" href="#ccl-kvs-mode" title="Permalink to this headline">#</a></h3>
+<h3>CCL_KVS_MODE<a class="headerlink" href="#ccl-kvs-mode" title="Link to this heading">#</a></h3>
 <p><strong>Syntax</strong></p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">CCL_KVS_MODE</span><span class="o">=&lt;</span><span class="n">value</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <p><strong>Arguments</strong></p>
-<table class="colwidths-given table table-left">
+<div class="pst-scrollable-table-container"><table class="table table-left">
 <colgroup>
-<col style="width: 33%" />
-<col style="width: 67%" />
+<col style="width: 33.3%" />
+<col style="width: 66.7%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>&lt;cpulist&gt;</p></th>
@@ -1958,24 +2171,25 @@ The number should not exceed the number of NUMA nodes available on the system.</
 </tr>
 </tbody>
 </table>
+</div>
 <p><strong>Description</strong></p>
 <p>Set the <code class="docutils literal notranslate"><span class="pre">CCL_KVS_MODE</span></code> environment variable to choose the key-value store mechanism used during communicator creation. For the MPI-based transport (<code class="docutils literal notranslate"><span class="pre">CCL_ATL_TRANSPORT=mpi</span></code>), use <code class="docutils literal notranslate"><span class="pre">mpi</span></code>. For large-scale runs with the OFI transport and PMIx (<code class="docutils literal notranslate"><span class="pre">CCL_ATL_TRANSPORT=ofi</span></code> and <code class="docutils literal notranslate"><span class="pre">CCL_PROCESS_LAUNCHER=pmix</span></code>), we recommend using <code class="docutils literal notranslate"><span class="pre">pmix_ofi</span></code> or <code class="docutils literal notranslate"><span class="pre">pmix_ofi_shm</span></code>. The <code class="docutils literal notranslate"><span class="pre">pmix_ofi</span></code> modes bypass the default KVS layer in favor of the PMIx operations (put/get/fence/commit) and can yield performance benefits, especially at scale.</p>
 </section>
 </section>
 <section id="atl">
-<h2>ATL<a class="headerlink" href="#atl" title="Permalink to this headline">#</a></h2>
+<h2>ATL<a class="headerlink" href="#atl" title="Link to this heading">#</a></h2>
 <p>The group of environment variables to control ATL (abstract transport layer).</p>
 <section id="ccl-atl-transport">
-<span id="id11"></span><h3>CCL_ATL_TRANSPORT<a class="headerlink" href="#ccl-atl-transport" title="Permalink to this headline">#</a></h3>
+<span id="id10"></span><h3>CCL_ATL_TRANSPORT<a class="headerlink" href="#ccl-atl-transport" title="Link to this heading">#</a></h3>
 <p><strong>Syntax</strong></p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">CCL_ATL_TRANSPORT</span><span class="o">=&lt;</span><span class="n">value</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <p><strong>Arguments</strong></p>
-<table class="colwidths-given table table-left">
+<div class="pst-scrollable-table-container"><table class="table table-left">
 <colgroup>
-<col style="width: 33%" />
-<col style="width: 67%" />
+<col style="width: 33.3%" />
+<col style="width: 66.7%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>&lt;value&gt;</p></th>
@@ -1991,20 +2205,21 @@ The number should not exceed the number of NUMA nodes available on the system.</
 </tr>
 </tbody>
 </table>
+</div>
 <p><strong>Description</strong></p>
 <p>Set this environment variable to select the transport for inter-process communications.</p>
 </section>
 <section id="ccl-atl-hmem">
-<h3>CCL_ATL_HMEM<a class="headerlink" href="#ccl-atl-hmem" title="Permalink to this headline">#</a></h3>
+<h3>CCL_ATL_HMEM<a class="headerlink" href="#ccl-atl-hmem" title="Link to this heading">#</a></h3>
 <p><strong>Syntax</strong></p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">CCL_ATL_HMEM</span><span class="o">=&lt;</span><span class="n">value</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <p><strong>Arguments</strong></p>
-<table class="colwidths-given table table-left">
+<div class="pst-scrollable-table-container"><table class="table table-left">
 <colgroup>
-<col style="width: 33%" />
-<col style="width: 67%" />
+<col style="width: 33.3%" />
+<col style="width: 66.7%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>&lt;value&gt;</p></th>
@@ -2020,21 +2235,22 @@ The number should not exceed the number of NUMA nodes available on the system.</
 </tr>
 </tbody>
 </table>
+</div>
 <p><strong>Description</strong></p>
 <p>Set this environment variable to enable handling of HMEM/GPU buffers by the transport layer.
 The actual HMEM support depends on the limitations on the transport level and system configuration.</p>
 </section>
 <section id="ccl-atl-shm">
-<h3>CCL_ATL_SHM<a class="headerlink" href="#ccl-atl-shm" title="Permalink to this headline">#</a></h3>
+<h3>CCL_ATL_SHM<a class="headerlink" href="#ccl-atl-shm" title="Link to this heading">#</a></h3>
 <p><strong>Syntax</strong></p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">CCL_ATL_SHM</span><span class="o">=&lt;</span><span class="n">value</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <p><strong>Arguments</strong></p>
-<table class="colwidths-given table table-left">
+<div class="pst-scrollable-table-container"><table class="table table-left">
 <colgroup>
-<col style="width: 33%" />
-<col style="width: 67%" />
+<col style="width: 33.3%" />
+<col style="width: 66.7%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>&lt;value&gt;</p></th>
@@ -2050,6 +2266,7 @@ The actual HMEM support depends on the limitations on the transport level and sy
 </tr>
 </tbody>
 </table>
+</div>
 <p><strong>Description</strong></p>
 <p>Set this environment variable to enable the OFI shared memory provider to
 communicate between ranks in the same node of the host (CPU) buffers. This
@@ -2067,17 +2284,21 @@ To run it with DSA*, you need:
 support in the SHM provider:
 <a class="reference external" href="https://ofiwg.github.io/libfabric/main/man/fi_shm.7.html">https://ofiwg.github.io/libfabric/main/man/fi_shm.7.html</a>.</p>
 </section>
+</section>
+<section id="process-launcher">
+<h2>PROCESS LAUNCHER<a class="headerlink" href="#process-launcher" title="Link to this heading">#</a></h2>
+<p>The group of environment variables to control PROCESS_LAUNCHER.</p>
 <section id="ccl-process-launcher">
-<h3>CCL_PROCESS_LAUNCHER<a class="headerlink" href="#ccl-process-launcher" title="Permalink to this headline">#</a></h3>
+<h3>CCL_PROCESS_LAUNCHER<a class="headerlink" href="#ccl-process-launcher" title="Link to this heading">#</a></h3>
 <p><strong>Syntax</strong></p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">CCL_PROCESS_LAUNCHER</span><span class="o">=&lt;</span><span class="n">value</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <p><strong>Arguments</strong></p>
-<table class="colwidths-given table table-left">
+<div class="pst-scrollable-table-container"><table class="table table-left">
 <colgroup>
-<col style="width: 33%" />
-<col style="width: 67%" />
+<col style="width: 33.3%" />
+<col style="width: 66.7%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>&lt;value&gt;</p></th>
@@ -2103,20 +2324,21 @@ support in the SHM provider:
 </tr>
 </tbody>
 </table>
+</div>
 <p><strong>Description</strong></p>
 <p>Set this environment variable to specify the job launcher.</p>
 </section>
 <section id="ccl-local-size">
-<h3>CCL_LOCAL_SIZE<a class="headerlink" href="#ccl-local-size" title="Permalink to this headline">#</a></h3>
+<h3>CCL_LOCAL_SIZE<a class="headerlink" href="#ccl-local-size" title="Link to this heading">#</a></h3>
 <p><strong>Syntax</strong></p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">CCL_LOCAL_SIZE</span><span class="o">=&lt;</span><span class="n">value</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <p><strong>Arguments</strong></p>
-<table class="colwidths-given table table-left">
+<div class="pst-scrollable-table-container"><table class="table table-left">
 <colgroup>
-<col style="width: 33%" />
-<col style="width: 67%" />
+<col style="width: 33.3%" />
+<col style="width: 66.7%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>&lt;value&gt;</p></th>
@@ -2129,20 +2351,21 @@ support in the SHM provider:
 </tr>
 </tbody>
 </table>
+</div>
 <p><strong>Description</strong></p>
 <p>Set this environment variable to specify a total number of ranks on a local host.</p>
 </section>
 <section id="ccl-local-rank">
-<h3>CCL_LOCAL_RANK<a class="headerlink" href="#ccl-local-rank" title="Permalink to this headline">#</a></h3>
+<h3>CCL_LOCAL_RANK<a class="headerlink" href="#ccl-local-rank" title="Link to this heading">#</a></h3>
 <p><strong>Syntax</strong></p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">CCL_LOCAL_RANK</span><span class="o">=&lt;</span><span class="n">value</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <p><strong>Arguments</strong></p>
-<table class="colwidths-given table table-left">
+<div class="pst-scrollable-table-container"><table class="table table-left">
 <colgroup>
-<col style="width: 33%" />
-<col style="width: 67%" />
+<col style="width: 33.3%" />
+<col style="width: 66.7%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>&lt;value&gt;</p></th>
@@ -2155,25 +2378,26 @@ support in the SHM provider:
 </tr>
 </tbody>
 </table>
+</div>
 <p><strong>Description</strong></p>
 <p>Set this environment variable to specify the rank number of the current process in the local host.</p>
 </section>
 </section>
 <section id="multi-nic">
-<h2>Multi-NIC<a class="headerlink" href="#multi-nic" title="Permalink to this headline">#</a></h2>
+<h2>Multi-NIC<a class="headerlink" href="#multi-nic" title="Link to this heading">#</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">CCL_MNIC</span></code>, <code class="docutils literal notranslate"><span class="pre">CCL_MNIC_NAME</span></code> and <code class="docutils literal notranslate"><span class="pre">CCL_MNIC_COUNT</span></code> define filters to select multiple NICs.
 oneCCL workers will be pinned on selected NICs in a round-robin way.</p>
 <section id="ccl-mnic">
-<h3>CCL_MNIC<a class="headerlink" href="#ccl-mnic" title="Permalink to this headline">#</a></h3>
+<h3>CCL_MNIC<a class="headerlink" href="#ccl-mnic" title="Link to this heading">#</a></h3>
 <p><strong>Syntax</strong></p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">CCL_MNIC</span><span class="o">=&lt;</span><span class="n">value</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <p><strong>Arguments</strong></p>
-<table class="colwidths-given table table-left">
+<div class="pst-scrollable-table-container"><table class="table table-left">
 <colgroup>
-<col style="width: 33%" />
-<col style="width: 67%" />
+<col style="width: 33.3%" />
+<col style="width: 66.7%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>&lt;value&gt;</p></th>
@@ -2192,20 +2416,21 @@ oneCCL workers will be pinned on selected NICs in a round-robin way.</p>
 </tr>
 </tbody>
 </table>
+</div>
 <p><strong>Description</strong></p>
 <p>Set this environment variable to control multi-NIC selection by NIC locality.</p>
 </section>
 <section id="ccl-mnic-name">
-<h3>CCL_MNIC_NAME<a class="headerlink" href="#ccl-mnic-name" title="Permalink to this headline">#</a></h3>
+<h3>CCL_MNIC_NAME<a class="headerlink" href="#ccl-mnic-name" title="Link to this heading">#</a></h3>
 <p><strong>Syntax</strong></p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">CCL_MNIC_NAME</span><span class="o">=&lt;</span><span class="n">namelist</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <p><strong>Arguments</strong></p>
-<table class="colwidths-given table table-left">
+<div class="pst-scrollable-table-container"><table class="table table-left">
 <colgroup>
-<col style="width: 33%" />
-<col style="width: 67%" />
+<col style="width: 33.3%" />
+<col style="width: 66.7%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>&lt;namelist&gt;</p></th>
@@ -2221,20 +2446,21 @@ will be selected, while <code class="docutils literal notranslate"><span class="
 </tr>
 </tbody>
 </table>
+</div>
 <p><strong>Description</strong></p>
 <p>Set this environment variable to control multi-NIC selection by NIC names.</p>
 </section>
 <section id="ccl-mnic-count">
-<h3>CCL_MNIC_COUNT<a class="headerlink" href="#ccl-mnic-count" title="Permalink to this headline">#</a></h3>
+<h3>CCL_MNIC_COUNT<a class="headerlink" href="#ccl-mnic-count" title="Link to this heading">#</a></h3>
 <p><strong>Syntax</strong></p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">CCL_MNIC_COUNT</span><span class="o">=&lt;</span><span class="n">value</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <p><strong>Arguments</strong></p>
-<table class="colwidths-given table table-left">
+<div class="pst-scrollable-table-container"><table class="table table-left">
 <colgroup>
-<col style="width: 33%" />
-<col style="width: 67%" />
+<col style="width: 33.3%" />
+<col style="width: 66.7%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>&lt;value&gt;</p></th>
@@ -2248,6 +2474,7 @@ If not specified then equal to the number of oneCCL workers.</p></td>
 </tr>
 </tbody>
 </table>
+</div>
 <p><strong>Description</strong></p>
 <p>Set this environment variable to specify the maximum number of NICs to be
 selected. The actual number of NICs selected may be smaller due to limitations
@@ -2255,17 +2482,17 @@ on transport level or system configuration.</p>
 </section>
 </section>
 <section id="inter-process-communication-ipc">
-<h2>Inter Process Communication (IPC)<a class="headerlink" href="#inter-process-communication-ipc" title="Permalink to this headline">#</a></h2>
+<h2>Inter Process Communication (IPC)<a class="headerlink" href="#inter-process-communication-ipc" title="Link to this heading">#</a></h2>
 <section id="ccl-ze-cache-open-ipc-handles-threshold">
-<h3>CCL_ZE_CACHE_OPEN_IPC_HANDLES_THRESHOLD<a class="headerlink" href="#ccl-ze-cache-open-ipc-handles-threshold" title="Permalink to this headline">#</a></h3>
+<h3>CCL_ZE_CACHE_OPEN_IPC_HANDLES_THRESHOLD<a class="headerlink" href="#ccl-ze-cache-open-ipc-handles-threshold" title="Link to this heading">#</a></h3>
 <p><strong>Syntax</strong></p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">CCL_ZE_CACHE_OPEN_IPC_HANDLES_THRESHOLD</span><span class="o">=&lt;</span><span class="n">value</span><span class="o">&gt;</span>
 </pre></div>
 </div>
-<table class="colwidths-given table table-left">
+<div class="pst-scrollable-table-container"><table class="table table-left">
 <colgroup>
-<col style="width: 33%" />
-<col style="width: 67%" />
+<col style="width: 33.3%" />
+<col style="width: 66.7%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>&lt;value&gt;</p></th>
@@ -2278,6 +2505,7 @@ on transport level or system configuration.</p>
 </tr>
 </tbody>
 </table>
+</div>
 <p><strong>Description</strong></p>
 <p>Use this environment variable to change the number of IPC
 handles opened with <code class="docutils literal notranslate"><span class="pre">zeMemOpenIpcHandle()</span></code> that oneCCL maintains in its receiving
@@ -2288,16 +2516,16 @@ specified threshold, the cache will evict a handle using a LRU (Last Recently
 Used) policy. Starting with version 2021.10, the default value is 1000.</p>
 </section>
 <section id="ccl-ze-ipc-exchange">
-<h3>CCL_ZE_IPC_EXCHANGE<a class="headerlink" href="#ccl-ze-ipc-exchange" title="Permalink to this headline">#</a></h3>
+<h3>CCL_ZE_IPC_EXCHANGE<a class="headerlink" href="#ccl-ze-ipc-exchange" title="Link to this heading">#</a></h3>
 <p><strong>Syntax</strong></p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">CCL_ZE_IPC_EXCHANGE</span><span class="o">=&lt;</span><span class="n">value</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <p><strong>Arguments</strong></p>
-<table class="colwidths-given table table-left">
+<div class="pst-scrollable-table-container"><table class="table table-left">
 <colgroup>
-<col style="width: 33%" />
-<col style="width: 67%" />
+<col style="width: 33.3%" />
+<col style="width: 66.7%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>&lt;value&gt;</p></th>
@@ -2319,19 +2547,20 @@ Used) policy. Starting with version 2021.10, the default value is 1000.</p>
 </tr>
 </tbody>
 </table>
+</div>
 <p><strong>Description</strong></p>
 <p>Set this environment variable to specify the mechanism to use for Level Zero IPC exchange.</p>
 </section>
 <section id="ccl-ze-cache-get-ipc-handles-threshold">
-<h3>CCL_ZE_CACHE_GET_IPC_HANDLES_THRESHOLD<a class="headerlink" href="#ccl-ze-cache-get-ipc-handles-threshold" title="Permalink to this headline">#</a></h3>
+<h3>CCL_ZE_CACHE_GET_IPC_HANDLES_THRESHOLD<a class="headerlink" href="#ccl-ze-cache-get-ipc-handles-threshold" title="Link to this heading">#</a></h3>
 <p><strong>Syntax</strong></p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">CCL_ZE_CACHE_GET_IPC_HANDLES_THRESHOLD</span><span class="o">=&lt;</span><span class="n">value</span><span class="o">&gt;</span>
 </pre></div>
 </div>
-<table class="colwidths-given table table-left">
+<div class="pst-scrollable-table-container"><table class="table table-left">
 <colgroup>
-<col style="width: 33%" />
-<col style="width: 67%" />
+<col style="width: 33.3%" />
+<col style="width: 66.7%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>&lt;value&gt;</p></th>
@@ -2344,6 +2573,7 @@ Used) policy. Starting with version 2021.10, the default value is 1000.</p>
 </tr>
 </tbody>
 </table>
+</div>
 <p><strong>Description</strong></p>
 <p>Use this environment variable to change the number of IPC handles obtained with
 <code class="docutils literal notranslate"><span class="pre">zeMemGetIpcHandle()</span></code> that oneCCL maintains in its sender cache. IPC handles
@@ -2355,19 +2585,19 @@ policy. The default value is 1000.</p>
 </section>
 </section>
 <section id="low-precision-data-types">
-<span id="low-precision-datatypes"></span><h2>Low-precision Data Types<a class="headerlink" href="#low-precision-data-types" title="Permalink to this headline">#</a></h2>
+<span id="low-precision-datatypes"></span><h2>Low-precision Data Types<a class="headerlink" href="#low-precision-data-types" title="Link to this heading">#</a></h2>
 <p>The group of environment variables to control processing of low-precision data types.</p>
 <section id="ccl-bf16">
-<h3>CCL_BF16<a class="headerlink" href="#ccl-bf16" title="Permalink to this headline">#</a></h3>
+<h3>CCL_BF16<a class="headerlink" href="#ccl-bf16" title="Link to this heading">#</a></h3>
 <p><strong>Syntax</strong></p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">CCL_BF16</span><span class="o">=&lt;</span><span class="n">value</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <p><strong>Arguments</strong></p>
-<table class="colwidths-given table table-left">
+<div class="pst-scrollable-table-container"><table class="table table-left">
 <colgroup>
-<col style="width: 33%" />
-<col style="width: 67%" />
+<col style="width: 33.3%" />
+<col style="width: 66.7%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>&lt;value&gt;</p></th>
@@ -2383,6 +2613,7 @@ policy. The default value is 1000.</p>
 </tr>
 </tbody>
 </table>
+</div>
 <p><strong>Description</strong></p>
 <p>Set this environment variable to select implementation for BF16 &lt;-&gt; FP32
 conversion on reduction phase of collective operation. The default value
@@ -2390,16 +2621,16 @@ depends on instruction set support on specific CPU. <code class="docutils litera
 implementation has precedence over <code class="docutils literal notranslate"><span class="pre">AVX512F</span></code>-based one.</p>
 </section>
 <section id="ccl-fp16">
-<h3>CCL_FP16<a class="headerlink" href="#ccl-fp16" title="Permalink to this headline">#</a></h3>
+<h3>CCL_FP16<a class="headerlink" href="#ccl-fp16" title="Link to this heading">#</a></h3>
 <p><strong>Syntax</strong></p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">CCL_FP16</span><span class="o">=&lt;</span><span class="n">value</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <p><strong>Arguments</strong></p>
-<table class="colwidths-given table table-left">
+<div class="pst-scrollable-table-container"><table class="table table-left">
 <colgroup>
-<col style="width: 33%" />
-<col style="width: 67%" />
+<col style="width: 33.3%" />
+<col style="width: 66.7%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>&lt;value&gt;</p></th>
@@ -2418,6 +2649,7 @@ implementation has precedence over <code class="docutils literal notranslate"><s
 </tr>
 </tbody>
 </table>
+</div>
 <p><strong>Description</strong></p>
 <p>Set this environment variable to select implementation for on reduction phase of collective operation.
 <code class="docutils literal notranslate"><span class="pre">AVX512FP16</span></code> uses native FP16 numeric operations for reduction.
@@ -2426,16 +2658,16 @@ The default value depends on instruction set support on specific CPU.
 <code class="docutils literal notranslate"><span class="pre">AVX512FP16</span></code>-based implementation has precedence over <code class="docutils literal notranslate"><span class="pre">AVX512F</span></code> and <code class="docutils literal notranslate"><span class="pre">F16C</span></code>-based one.</p>
 </section>
 <section id="ccl-atl-mpi-fp16">
-<h3>CCL_ATL_MPI_FP16<a class="headerlink" href="#ccl-atl-mpi-fp16" title="Permalink to this headline">#</a></h3>
+<h3>CCL_ATL_MPI_FP16<a class="headerlink" href="#ccl-atl-mpi-fp16" title="Link to this heading">#</a></h3>
 <p><strong>Syntax</strong></p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">CCL_ATL_MPI_FP16</span><span class="o">=&lt;</span><span class="n">value</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <p><strong>Arguments</strong></p>
-<table class="colwidths-given table table-left">
+<div class="pst-scrollable-table-container"><table class="table table-left">
 <colgroup>
-<col style="width: 33%" />
-<col style="width: 67%" />
+<col style="width: 33.3%" />
+<col style="width: 66.7%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>&lt;value&gt;</p></th>
@@ -2451,20 +2683,21 @@ The default value depends on instruction set support on specific CPU.
 </tr>
 </tbody>
 </table>
+</div>
 <p><strong>Description</strong></p>
 <p>Set this environment variable to enable or disable Intel MPI native FP16 support. Requires Intel MPI newer than 2021.13. This variable can be enabled with MPI implementation that is not Intel MPI, such as <code class="docutils literal notranslate"><span class="pre">MPICH</span></code>, but it will have no impact.</p>
 </section>
 <section id="ccl-atl-mpi-bf16">
-<h3>CCL_ATL_MPI_BF16<a class="headerlink" href="#ccl-atl-mpi-bf16" title="Permalink to this headline">#</a></h3>
+<h3>CCL_ATL_MPI_BF16<a class="headerlink" href="#ccl-atl-mpi-bf16" title="Link to this heading">#</a></h3>
 <p><strong>Syntax</strong></p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">CCL_ATL_MPI_BF16</span><span class="o">=&lt;</span><span class="n">value</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <p><strong>Arguments</strong></p>
-<table class="colwidths-given table table-left">
+<div class="pst-scrollable-table-container"><table class="table table-left">
 <colgroup>
-<col style="width: 33%" />
-<col style="width: 67%" />
+<col style="width: 33.3%" />
+<col style="width: 66.7%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>&lt;value&gt;</p></th>
@@ -2480,21 +2713,19 @@ The default value depends on instruction set support on specific CPU.
 </tr>
 </tbody>
 </table>
+</div>
 <p><strong>Description</strong></p>
 <p>Set this environment variable to enable or disable Intel MPI native BF16 support. Requires Intel MPI newer than 2021.13. This variable can be enabled with MPI implementation that is not Intel MPI, such as <code class="docutils literal notranslate"><span class="pre">MPICH</span></code>, but it will have no impact.</p>
 </section>
 </section>
 <section id="ccl-log-level">
-<h2>CCL_LOG_LEVEL<a class="headerlink" href="#ccl-log-level" title="Permalink to this headline">#</a></h2>
+<h2>CCL_LOG_LEVEL<a class="headerlink" href="#ccl-log-level" title="Link to this heading">#</a></h2>
 <p><strong>Syntax</strong></p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">CCL_LOG_LEVEL</span><span class="o">=&lt;</span><span class="n">value</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <p><strong>Arguments</strong></p>
-<table class="table table-left">
-<colgroup>
-<col style="width: 100%" />
-</colgroup>
+<div class="pst-scrollable-table-container"><table class="table table-left">
 <thead>
 <tr class="row-odd"><th class="head"><p>&lt;value&gt;</p></th>
 </tr>
@@ -2512,20 +2743,23 @@ The default value depends on instruction set support on specific CPU.
 </tr>
 </tbody>
 </table>
+</div>
 <p><strong>Description</strong></p>
 <p>Set this environment variable to control logging level.</p>
 </section>
+<section id="profiling">
+<h2>Profiling<a class="headerlink" href="#profiling" title="Link to this heading">#</a></h2>
 <section id="ccl-itt-level">
-<h2>CCL_ITT_LEVEL<a class="headerlink" href="#ccl-itt-level" title="Permalink to this headline">#</a></h2>
+<h3>CCL_ITT_LEVEL<a class="headerlink" href="#ccl-itt-level" title="Link to this heading">#</a></h3>
 <p><strong>Syntax</strong></p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">CCL_ITT_LEVEL</span><span class="o">=&lt;</span><span class="n">value</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <p><strong>Arguments</strong></p>
-<table class="colwidths-given table table-left">
+<div class="pst-scrollable-table-container"><table class="table table-left">
 <colgroup>
-<col style="width: 33%" />
-<col style="width: 67%" />
+<col style="width: 33.3%" />
+<col style="width: 66.7%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>&lt;value&gt;</p></th>
@@ -2541,25 +2775,87 @@ The default value depends on instruction set support on specific CPU.
 </tr>
 </tbody>
 </table>
+</div>
 <p><strong>Description</strong></p>
 <p>Set this environment variable to specify Intel&#174; Instrumentation and Tracing Technology (ITT) profiling level.
-Once the environment variable is enabled (value &gt; 0), it is possible to collect and display profiling
-data for oneCCL using tools such as Intel&#174; VTune&#8482; Profiler.</p>
+Once the environment variable is enabled (<cite>value&gt;0</cite>), it is possible to collect and display profiling
+data for oneCCL using tools such as Intel&#174; VTune&#8482; Profiler and <a class="reference external" href="https://github.com/intel/pti-gpu/tree/master/tools/unitrace">Unified Tracing and Profiling Tool</a>.</p>
+</section>
+<section id="ccl-profiling-enable">
+<h3>CCL_PROFILING_ENABLE<a class="headerlink" href="#ccl-profiling-enable" title="Link to this heading">#</a></h3>
+<p><strong>Syntax</strong></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">CCL_PROFILING_ENABLE</span><span class="o">=&lt;</span><span class="n">value</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p><strong>Arguments</strong></p>
+<div class="pst-scrollable-table-container"><table class="table table-left">
+<colgroup>
+<col style="width: 33.3%" />
+<col style="width: 66.7%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>&lt;value&gt;</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">1</span></code></p></td>
+<td><p>Enable oneCCL profiling.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">0</span></code></p></td>
+<td><p>Disable oneCCL profiling (default).</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This release provides a <em>technical preview</em> of a new profiling feature under development. All aspects of this feature are subject to change. There is no guarantee that the output format will remain stable and should not yet be relied upon. The feature may be removed without notice. The profiler captures environment information and oneCCL communication API call information.</p>
+</div>
+<p><strong>Description</strong>
+Set this environment variable to enable profiling within the oneCCL library.</p>
+<p>This environment variable enables profiling for:</p>
+<ul class="simple">
+<li><p>All the ranks, when the same value is set for all ranks or</p></li>
+<li><p>Selectively for defined ranks by specifying different value of this environment variable for different ranks. This may be accomplished through the use of a wrapper script with the job launcher.</p></li>
+</ul>
+<p>Notice that the <cite>CCL_PROFILING_ENABLE</cite> enables profiling information within the oneCCL library, which is different from the support provided by <cite>CCL_ITT_LEVEL</cite>.</p>
+<p>The profiler captures CCL environment information such as the CCL library version, compute backend, compiler, runtime environment variables, and OFI provider.</p>
+<p>The API call information profiles the following operations: <cite>ALLREDUCE</cite>, <cite>ALLGATHER</cite>, <cite>ALLGATHERV</cite>, <cite>ALLTOALL</cite>, <cite>ALLTOALLV</cite>, <cite>BARRIER</cite>, <cite>BROADCAST</cite>, <cite>REDUCE</cite>, <cite>REDUCE_SCATTER</cite>, <cite>send</cite>, and <cite>recv</cite>. The information is collected on a per communicator basis and captures the following information:</p>
+<ul class="simple">
+<li><p>User arguments for the API calls,</p></li>
+<li><p>Communicator ID,</p></li>
+<li><p>The host time consumed by the API calls with same user arguments and communicator ID, and</p></li>
+<li><p>Operation count/API calls with a unique set of arguments and communicator ID. Notice that the time measurement begins when the application calls the oneCCL API and ends when control returns to the application.</p></li>
+</ul>
+<p>The output for the environment info is printed with preceding <cite>Profiling_env</cite>. An example output is shown next:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="mi">2025</span><span class="o">:</span><span class="mo">05</span><span class="o">:</span><span class="mo">01</span><span class="mi">-12</span><span class="o">:</span><span class="mi">16</span><span class="o">:</span><span class="mi">24</span><span class="o">:</span><span class="p">(</span><span class="mi">1407613</span><span class="p">)</span><span class="w"> </span><span class="o">|</span><span class="n">Profiling_env</span><span class="o">|</span><span class="w"> </span><span class="n">CCL_WORKER_COUNT</span><span class="o">:</span><span class="w"> </span><span class="mi">1</span>
+<span class="mi">2025</span><span class="o">:</span><span class="mo">05</span><span class="o">:</span><span class="mo">01</span><span class="mi">-12</span><span class="o">:</span><span class="mi">16</span><span class="o">:</span><span class="mi">24</span><span class="o">:</span><span class="p">(</span><span class="mi">1407613</span><span class="p">)</span><span class="w"> </span><span class="o">|</span><span class="n">Profiling_env</span><span class="o">|</span><span class="w"> </span><span class="n">CCL_WORKER_OFFLOAD</span><span class="o">:</span><span class="w"> </span><span class="mi">1</span>
+<span class="mi">2025</span><span class="o">:</span><span class="mo">05</span><span class="o">:</span><span class="mo">01</span><span class="mi">-12</span><span class="o">:</span><span class="mi">16</span><span class="o">:</span><span class="mi">24</span><span class="o">:</span><span class="p">(</span><span class="mi">1407613</span><span class="p">)</span><span class="w"> </span><span class="o">|</span><span class="n">Profiling_env</span><span class="o">|</span><span class="w"> </span><span class="n">CCL_WORKER_WAIT</span><span class="o">:</span><span class="w"> </span><span class="mi">1</span>
+<span class="mi">2025</span><span class="o">:</span><span class="mo">05</span><span class="o">:</span><span class="mo">01</span><span class="mi">-12</span><span class="o">:</span><span class="mi">16</span><span class="o">:</span><span class="mi">24</span><span class="o">:</span><span class="p">(</span><span class="mi">1407613</span><span class="p">)</span><span class="w"> </span><span class="o">|</span><span class="n">Profiling_env</span><span class="o">|</span><span class="w"> </span><span class="n">CCL_LOG_LEVEL</span><span class="o">:</span><span class="w"> </span><span class="n">warn</span>
+</pre></div>
+</div>
+<p>The generated output for the oneCCL communication API calls is printed in a CSV format. An example below shows the profiling header and sample output for <cite>ALLGATHERV</cite>. Output is printed with preceding <cite>Profiling_Header</cite> and <cite>Profiling_log</cite>, which can help filter out the profiling information during analysis.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="nl">Profiling_Header</span><span class="p">:,</span><span class="w"> </span><span class="n">operation</span><span class="p">,</span><span class="w"> </span><span class="n">comm_id</span><span class="p">,</span><span class="w"> </span><span class="n">rank</span><span class="p">,</span><span class="w"> </span><span class="n">comm_size</span><span class="p">,</span><span class="w"> </span><span class="n">msg_count</span><span class="p">,</span><span class="w"> </span><span class="n">datatype</span><span class="p">,</span><span class="w"> </span><span class="n">op_count</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="n">duration</span><span class="o">-</span><span class="n">us</span><span class="p">;</span><span class="o">*</span><span class="p">].</span>
+<span class="nl">Profiling_log</span><span class="p">:,</span><span class="n">allgatherv</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="n">float64</span><span class="p">,</span><span class="mi">34</span><span class="p">,[</span><span class="mi">262</span><span class="p">;</span><span class="mi">96</span><span class="p">;</span><span class="mi">105</span><span class="p">;</span><span class="mi">95</span><span class="p">;</span><span class="mi">99</span><span class="p">;</span><span class="mi">93</span><span class="p">;</span><span class="mi">104</span><span class="p">;</span><span class="mi">88</span><span class="p">;</span><span class="mi">99</span><span class="p">;</span><span class="mi">96</span><span class="p">;</span><span class="mi">113</span><span class="p">;</span><span class="mi">83</span><span class="p">;</span><span class="mi">106</span><span class="p">;</span><span class="mi">83</span><span class="p">;</span><span class="mi">143</span><span class="p">;</span><span class="mi">91</span><span class="p">;</span><span class="mi">112</span><span class="p">;</span><span class="mi">90</span><span class="p">;</span><span class="mi">115</span><span class="p">;</span><span class="mi">91</span><span class="p">;</span><span class="mi">133</span><span class="p">;</span><span class="mi">101</span><span class="p">;</span><span class="mi">104</span><span class="p">;</span><span class="mi">76</span><span class="p">;</span><span class="mi">168</span><span class="p">;</span><span class="mi">96</span><span class="p">;</span><span class="mi">206</span><span class="p">;</span><span class="mi">108</span><span class="p">;</span><span class="mi">253</span><span class="p">;</span><span class="mi">104</span><span class="p">;</span><span class="mi">222</span><span class="p">;</span><span class="mi">89</span><span class="p">;</span><span class="mi">260</span><span class="p">;</span><span class="mi">99</span><span class="p">;]</span>
+</pre></div>
+</div>
+</section>
 </section>
 <section id="fusion">
-<h2>Fusion<a class="headerlink" href="#fusion" title="Permalink to this headline">#</a></h2>
+<h2>Fusion<a class="headerlink" href="#fusion" title="Link to this heading">#</a></h2>
 <p>The group of environment variables to control fusion of collective operations.</p>
 <section id="ccl-fusion">
-<h3>CCL_FUSION<a class="headerlink" href="#ccl-fusion" title="Permalink to this headline">#</a></h3>
+<h3>CCL_FUSION<a class="headerlink" href="#ccl-fusion" title="Link to this heading">#</a></h3>
 <p><strong>Syntax</strong></p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">CCL_FUSION</span><span class="o">=&lt;</span><span class="n">value</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <p><strong>Arguments</strong></p>
-<table class="colwidths-given table table-left">
+<div class="pst-scrollable-table-container"><table class="table table-left">
 <colgroup>
-<col style="width: 33%" />
-<col style="width: 67%" />
+<col style="width: 33.3%" />
+<col style="width: 66.7%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>&lt;value&gt;</p></th>
@@ -2575,21 +2871,22 @@ data for oneCCL using tools such as Intel&#174; VTune&#8482; Profiler.</p>
 </tr>
 </tbody>
 </table>
+</div>
 <p><strong>Description</strong></p>
 <p>Set this environment variable to control fusion of collective operations.
 The real fusion depends on additional settings described below.</p>
 </section>
 <section id="ccl-fusion-bytes-threshold">
-<span id="id13"></span><h3>CCL_FUSION_BYTES_THRESHOLD<a class="headerlink" href="#ccl-fusion-bytes-threshold" title="Permalink to this headline">#</a></h3>
+<span id="id12"></span><h3>CCL_FUSION_BYTES_THRESHOLD<a class="headerlink" href="#ccl-fusion-bytes-threshold" title="Link to this heading">#</a></h3>
 <p><strong>Syntax</strong></p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">CCL_FUSION_BYTES_THRESHOLD</span><span class="o">=&lt;</span><span class="n">value</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <p><strong>Arguments</strong></p>
-<table class="colwidths-given table table-left">
+<div class="pst-scrollable-table-container"><table class="table table-left">
 <colgroup>
-<col style="width: 33%" />
-<col style="width: 67%" />
+<col style="width: 33.3%" />
+<col style="width: 66.7%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>&lt;value&gt;</p></th>
@@ -2603,20 +2900,21 @@ to <code class="docutils literal notranslate"><span class="pre">SIZE</span></cod
 </tr>
 </tbody>
 </table>
+</div>
 <p><strong>Description</strong></p>
 <p>Set this environment variable to specify the threshold of the number of bytes for a collective operation to be fused.</p>
 </section>
 <section id="ccl-fusion-count-threshold">
-<span id="id14"></span><h3>CCL_FUSION_COUNT_THRESHOLD<a class="headerlink" href="#ccl-fusion-count-threshold" title="Permalink to this headline">#</a></h3>
+<span id="id13"></span><h3>CCL_FUSION_COUNT_THRESHOLD<a class="headerlink" href="#ccl-fusion-count-threshold" title="Link to this heading">#</a></h3>
 <p><strong>Syntax</strong></p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">CCL_FUSION_COUNT_THRESHOLD</span><span class="o">=&lt;</span><span class="n">value</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <p><strong>Arguments</strong></p>
-<table class="colwidths-given table table-left">
+<div class="pst-scrollable-table-container"><table class="table table-left">
 <colgroup>
-<col style="width: 33%" />
-<col style="width: 67%" />
+<col style="width: 33.3%" />
+<col style="width: 66.7%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>&lt;value&gt;</p></th>
@@ -2630,20 +2928,21 @@ oneCCL can fuse together no more than <code class="docutils literal notranslate"
 </tr>
 </tbody>
 </table>
+</div>
 <p><strong>Description</strong></p>
 <p>Set this environment variable to specify count threshold for a collective operation to be fused.</p>
 </section>
 <section id="ccl-fusion-cycle-ms">
-<span id="id15"></span><h3>CCL_FUSION_CYCLE_MS<a class="headerlink" href="#ccl-fusion-cycle-ms" title="Permalink to this headline">#</a></h3>
+<span id="id14"></span><h3>CCL_FUSION_CYCLE_MS<a class="headerlink" href="#ccl-fusion-cycle-ms" title="Link to this heading">#</a></h3>
 <p><strong>Syntax</strong></p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">CCL_FUSION_CYCLE_MS</span><span class="o">=&lt;</span><span class="n">value</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <p><strong>Arguments</strong></p>
-<table class="colwidths-given table table-left">
+<div class="pst-scrollable-table-container"><table class="table table-left">
 <colgroup>
-<col style="width: 33%" />
-<col style="width: 67%" />
+<col style="width: 33.3%" />
+<col style="width: 66.7%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>&lt;value&gt;</p></th>
@@ -2661,21 +2960,22 @@ oneCCL can fuse together no more than <code class="docutils literal notranslate"
 </tr>
 </tbody>
 </table>
+</div>
 <p><strong>Description</strong></p>
 <p>Set this environment variable to specify the frequency of checking for collectives operations to be fused.</p>
 </section>
 </section>
 <section id="ccl-priority">
-<span id="id16"></span><h2>CCL_PRIORITY<a class="headerlink" href="#ccl-priority" title="Permalink to this headline">#</a></h2>
+<span id="id15"></span><h2>CCL_PRIORITY<a class="headerlink" href="#ccl-priority" title="Link to this heading">#</a></h2>
 <p><strong>Syntax</strong></p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">CCL_PRIORITY</span><span class="o">=&lt;</span><span class="n">value</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <p><strong>Arguments</strong></p>
-<table class="colwidths-given table table-left">
+<div class="pst-scrollable-table-container"><table class="table table-left">
 <colgroup>
-<col style="width: 33%" />
-<col style="width: 67%" />
+<col style="width: 33.3%" />
+<col style="width: 66.7%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>&lt;value&gt;</p></th>
@@ -2694,20 +2994,21 @@ oneCCL can fuse together no more than <code class="docutils literal notranslate"
 </tr>
 </tbody>
 </table>
+</div>
 <p><strong>Description</strong></p>
 <p>Set this environment variable to control priority mode of collective operations.</p>
 </section>
 <section id="ccl-max-short-size">
-<h2>CCL_MAX_SHORT_SIZE<a class="headerlink" href="#ccl-max-short-size" title="Permalink to this headline">#</a></h2>
+<h2>CCL_MAX_SHORT_SIZE<a class="headerlink" href="#ccl-max-short-size" title="Link to this heading">#</a></h2>
 <p><strong>Syntax</strong></p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">CCL_MAX_SHORT_SIZE</span><span class="o">=&lt;</span><span class="n">value</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <p><strong>Arguments</strong></p>
-<table class="colwidths-given table table-left">
+<div class="pst-scrollable-table-container"><table class="table table-left">
 <colgroup>
-<col style="width: 33%" />
-<col style="width: 67%" />
+<col style="width: 33.3%" />
+<col style="width: 66.7%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>&lt;value&gt;</p></th>
@@ -2723,20 +3024,21 @@ Applicable for <code class="docutils literal notranslate"><span class="pre">ALLR
 </tr>
 </tbody>
 </table>
+</div>
 <p><strong>Description</strong></p>
 <p>Set this environment variable to specify the threshold of the number of bytes for a collective operation to be split.</p>
 </section>
 <section id="ccl-sycl-output-event">
-<h2>CCL_SYCL_OUTPUT_EVENT<a class="headerlink" href="#ccl-sycl-output-event" title="Permalink to this headline">#</a></h2>
+<h2>CCL_SYCL_OUTPUT_EVENT<a class="headerlink" href="#ccl-sycl-output-event" title="Link to this heading">#</a></h2>
 <p><strong>Syntax</strong></p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">CCL_SYCL_OUTPUT_EVENT</span><span class="o">=&lt;</span><span class="n">value</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <p><strong>Arguments</strong></p>
-<table class="colwidths-given table table-left">
+<div class="pst-scrollable-table-container"><table class="table table-left">
 <colgroup>
-<col style="width: 33%" />
-<col style="width: 67%" />
+<col style="width: 33.3%" />
+<col style="width: 66.7%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>&lt;value&gt;</p></th>
@@ -2752,22 +3054,23 @@ Applicable for <code class="docutils literal notranslate"><span class="pre">ALLR
 </tr>
 </tbody>
 </table>
+</div>
 <p><strong>Description</strong></p>
 <p>Set this environment variable to control support for SYCL output event.
 Once the support is enabled, you can retrieve SYCL output event from oneCCL event using <code class="docutils literal notranslate"><span class="pre">get_native()</span></code> method.
 oneCCL event must be associated with oneCCL communication operation.</p>
 </section>
 <section id="ccl-ze-library-path">
-<h2>CCL_ZE_LIBRARY_PATH<a class="headerlink" href="#ccl-ze-library-path" title="Permalink to this headline">#</a></h2>
+<h2>CCL_ZE_LIBRARY_PATH<a class="headerlink" href="#ccl-ze-library-path" title="Link to this heading">#</a></h2>
 <p><strong>Syntax</strong></p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">CCL_ZE_LIBRARY_PATH</span><span class="o">=&lt;</span><span class="n">value</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <p><strong>Arguments</strong></p>
-<table class="colwidths-given table table-left">
+<div class="pst-scrollable-table-container"><table class="table table-left">
 <colgroup>
-<col style="width: 33%" />
-<col style="width: 67%" />
+<col style="width: 33.3%" />
+<col style="width: 66.7%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>&lt;value&gt;</p></th>
@@ -2780,6 +3083,7 @@ oneCCL event must be associated with oneCCL communication operation.</p>
 </tr>
 </tbody>
 </table>
+</div>
 <p><strong>Description</strong></p>
 <p>Set this environment variable to specify the name and full path to
 <code class="docutils literal notranslate"><span class="pre">Level-Zero</span></code> library. The path should be absolute and validated. Set this
@@ -2787,18 +3091,18 @@ variable if <code class="docutils literal notranslate"><span class="pre">Level-Z
 oneCCL uses the <code class="docutils literal notranslate"><span class="pre">libze_loader.so</span></code> name for dynamic loading.</p>
 </section>
 <section id="point-to-point-operations">
-<h2>Point-To-Point Operations<a class="headerlink" href="#point-to-point-operations" title="Permalink to this headline">#</a></h2>
+<h2>Point-To-Point Operations<a class="headerlink" href="#point-to-point-operations" title="Link to this heading">#</a></h2>
 <section id="ccl-recv">
-<h3>CCL_RECV<a class="headerlink" href="#ccl-recv" title="Permalink to this headline">#</a></h3>
+<h3>CCL_RECV<a class="headerlink" href="#ccl-recv" title="Link to this heading">#</a></h3>
 <p><strong>Syntax</strong></p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">CCL_RECV</span><span class="o">=&lt;</span><span class="n">value</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <p><strong>Arguments</strong></p>
-<table class="colwidths-given table table-left">
+<div class="pst-scrollable-table-container"><table class="table table-left">
 <colgroup>
-<col style="width: 33%" />
-<col style="width: 67%" />
+<col style="width: 33.3%" />
+<col style="width: 66.7%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>&lt;value&gt;</p></th>
@@ -2817,18 +3121,19 @@ oneCCL uses the <code class="docutils literal notranslate"><span class="pre">lib
 </tr>
 </tbody>
 </table>
+</div>
 </section>
 <section id="ccl-send">
-<h3>CCL_SEND<a class="headerlink" href="#ccl-send" title="Permalink to this headline">#</a></h3>
+<h3>CCL_SEND<a class="headerlink" href="#ccl-send" title="Link to this heading">#</a></h3>
 <p><strong>Syntax</strong></p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">CCL_SEND</span><span class="o">=&lt;</span><span class="n">value</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <p><strong>Arguments</strong></p>
-<table class="colwidths-given table table-left">
+<div class="pst-scrollable-table-container"><table class="table table-left">
 <colgroup>
-<col style="width: 33%" />
-<col style="width: 67%" />
+<col style="width: 33.3%" />
+<col style="width: 66.7%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>&lt;value&gt;</p></th>
@@ -2847,19 +3152,20 @@ oneCCL uses the <code class="docutils literal notranslate"><span class="pre">lib
 </tr>
 </tbody>
 </table>
+</div>
 </section>
 </section>
 <section id="ccl-ze-tmp-buf-size">
-<h2>CCL_ZE_TMP_BUF_SIZE<a class="headerlink" href="#ccl-ze-tmp-buf-size" title="Permalink to this headline">#</a></h2>
+<h2>CCL_ZE_TMP_BUF_SIZE<a class="headerlink" href="#ccl-ze-tmp-buf-size" title="Link to this heading">#</a></h2>
 <p><strong>Syntax</strong></p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">CCL_ZE_TMP_BUF_SIZE</span><span class="o">=&lt;</span><span class="n">value</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <p><strong>Arguments</strong></p>
-<table class="colwidths-given table table-left">
+<div class="pst-scrollable-table-container"><table class="table table-left">
 <colgroup>
-<col style="width: 33%" />
-<col style="width: 67%" />
+<col style="width: 33.3%" />
+<col style="width: 66.7%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>&lt;value&gt;</p></th>
@@ -2873,6 +3179,7 @@ collective operations with topo algorithm and Level Zero path. Default is <code 
 </tr>
 </tbody>
 </table>
+</div>
 <p><strong>Description</strong></p>
 <p>Set this environment variable to change the size of the temporary buffer used
 by the topo algorithm in the Level Zero path. The value is specified in bytes.
@@ -2891,11 +3198,10 @@ utilization, but can degrade performance.</p>
 
               
               
-                <footer class="bd-footer-article">
+              
+              
+                <footer class="prev-next-footer d-print-none">
                   
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="api/operations/point-to-point.html"
@@ -2915,10 +3221,7 @@ utilization, but can degrade performance.</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -2926,6 +3229,7 @@ utilization, but can degrade performance.</p>
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -2939,6 +3243,7 @@ utilization, but can degrade performance.</p>
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#ccl-allgather-ccl-allgatherv">CCL_ALLGATHER/CCL_ALLGATHERV</a></li>
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#ccl-allgatherv-monolithic-pipeline-kernel">CCL_ALLGATHERV_MONOLITHIC_PIPELINE_KERNEL</a></li>
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#ccl-allgather-scaleout-ccl-allgatherv-scaleout">CCL_ALLGATHER_SCALEOUT/CCL_ALLGATHERV_SCALEOUT</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#ccl-sycl-allgatherv-scaleout">CCL_SYCL_ALLGATHERV_SCALEOUT</a></li>
 </ul>
 </li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#allreduce">ALLREDUCE</a><ul class="nav section-nav flex-column">
@@ -2968,7 +3273,7 @@ utilization, but can degrade performance.</p>
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#ccl-reduce-scaleout-gpu-buffers-only">CCL_REDUCE_SCALEOUT (GPU buffers only)</a></li>
 </ul>
 </li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#reduce-scatter">REDUCE_SCATTER</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#reduce-scatter">REDUCE SCATTER</a><ul class="nav section-nav flex-column">
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#ccl-reduce-scatter">CCL_REDUCE_SCATTER</a></li>
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">CCL_REDUCE_SCATTER_MONOLITHIC_PIPELINE_KERNEL (GPU buffers only)</a></li>
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#ccl-reduce-scatter-scaleout-gpu-buffers-only">CCL_REDUCE_SCATTER_SCALEOUT (GPU buffers only)</a></li>
@@ -2995,7 +3300,13 @@ utilization, but can degrade performance.</p>
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#ccl-sycl-allreduce-scaleout">CCL_SYCL_ALLREDUCE_SCALEOUT</a></li>
 </ul>
 </li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">REDUCE_SCATTER</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">BROADCAST</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#ccl-sycl-broadcast-tmp-buf">CCL_SYCL_BROADCAST_TMP_BUF</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#ccl-sycl-broadcast-small-threshold">CCL_SYCL_BROADCAST_SMALL_THRESHOLD</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#ccl-sycl-broadcast-scaleout-threshold">CCL_SYCL_BROADCAST_SCALEOUT_THRESHOLD</a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">REDUCE SCATTER</a><ul class="nav section-nav flex-column">
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#ccl-sycl-reduce-scatter-tmp-buf">CCL_SYCL_REDUCE_SCATTER_TMP_BUF</a></li>
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#ccl-sycl-reduce-scatter-small-threshold">CCL_SYCL_REDUCE_SCATTER_SMALL_THRESHOLD</a></li>
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#ccl-sycl-reduce-scatter-scaleout-direct-threshold">CCL_SYCL_REDUCE_SCATTER_SCALEOUT_DIRECT_THRESHOLD</a></li>
@@ -3021,6 +3332,9 @@ utilization, but can degrade performance.</p>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ccl-atl-transport">CCL_ATL_TRANSPORT</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ccl-atl-hmem">CCL_ATL_HMEM</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ccl-atl-shm">CCL_ATL_SHM</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#process-launcher">PROCESS LAUNCHER</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ccl-process-launcher">CCL_PROCESS_LAUNCHER</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ccl-local-size">CCL_LOCAL_SIZE</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ccl-local-rank">CCL_LOCAL_RANK</a></li>
@@ -3046,7 +3360,11 @@ utilization, but can degrade performance.</p>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ccl-log-level">CCL_LOG_LEVEL</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ccl-itt-level">CCL_ITT_LEVEL</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#profiling">Profiling</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ccl-itt-level">CCL_ITT_LEVEL</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ccl-profiling-enable">CCL_PROFILING_ENABLE</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fusion">Fusion</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ccl-fusion">CCL_FUSION</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ccl-fusion-bytes-threshold">CCL_FUSION_BYTES_THRESHOLD</a></li>
@@ -3085,6 +3403,7 @@ By Intel
   
   <div class="footer-item">
     
+
   <p class="copyright">
     
       &#169; Copyright 2025.
@@ -3101,7 +3420,7 @@ By Intel
   <div class="footer-item">
     
 <div class="extra_footer">
-  <p align="right"><a href="https://www.intel.com/content/www/us/en/privacy/intel-cookie-notice.html">Cookies</a></p>
+  <p align="right"><a href="https://www.intel.com/content/www/us/en/privacy/intel-cookie-notice.html">Cookies</a></p><br><div>Last updated: 07 July, 2025</div>
 </div>
   </div>
   
@@ -3114,8 +3433,8 @@ By Intel
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>

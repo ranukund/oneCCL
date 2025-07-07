@@ -42,7 +42,6 @@ Consider a simple oneCCL ``allreduce`` example for GPU.
       for (idx = 0; idx < elem_count; idx++) {
          send_buf_host_acc[idx] = rank;
       }
-
    .. code:: cpp
 
       /* or using SYCL USM */
@@ -50,7 +49,7 @@ Consider a simple oneCCL ``allreduce`` example for GPU.
          send_buf[idx] = rank;
       }
 
-4. For demonstration purposes, modify the ``send_buf`` on the GPU side:
+#. For demonstration purposes, modify the ``send_buf`` on the GPU side:
 
    .. code:: cpp
 
@@ -70,7 +69,6 @@ Consider a simple oneCCL ``allreduce`` example for GPU.
       }
 
    The ``allreduce`` invocation performs reduction of values from all processes and then distributes the result to all processes. In this case, the result is an array with ``elem_count`` elements, where all elements are equal to the sum of arithmetical progression:
-
 
    .. math::
       p \cdot (p + 1) / 2
